@@ -1,0 +1,98 @@
+/* ============================================================
+   BrightBoard — Color tokens
+   Brand: warm amber-orange, warm near-black "ink", warm greys, white.
+   Sampled from the BrightBoard dot-matrix wordmark (#EB8B02 / #0D0B0A).
+   ============================================================ */
+
+:root {
+  /* ---- Brand: Amber orange (the LED glow) ---- */
+  --bb-orange-50:  #FFF4E0;
+  --bb-orange-100: #FFE4B3;
+  --bb-orange-200: #FFCF80;
+  --bb-orange-300: #FCB84D;
+  --bb-orange-400: #F7A424;
+  --bb-orange-500: #F28A00;  /* PRIMARY brand orange */
+  --bb-orange-600: #D97A00;
+  --bb-orange-700: #B26200;
+  --bb-orange-800: #8A4C00;
+  --bb-orange-900: #5C3300;
+
+  /* ---- Ink: warm near-black (LED-off / cabinet housing) ---- */
+  --bb-ink-950: #0D0B0A;   /* deepest — the "screen off" black */
+  --bb-ink-900: #14110E;
+  --bb-ink-850: #1C1815;
+  --bb-ink-800: #241F1B;
+  --bb-ink-700: #322B25;
+
+  /* ---- Warm neutral grey scale ---- */
+  --bb-grey-50:  #F7F6F4;
+  --bb-grey-100: #EFEDEA;
+  --bb-grey-200: #E2DED9;
+  --bb-grey-300: #CBC5BD;
+  --bb-grey-400: #A79F94;
+  --bb-grey-500: #837B70;
+  --bb-grey-600: #635C53;
+  --bb-grey-700: #46413A;
+  --bb-grey-800: #2E2A25;
+  --bb-grey-900: #1A1714;
+
+  --bb-white: #FFFFFF;
+  --bb-black: #000000;
+
+  /* ---- Semantic status ---- */
+  --bb-success-500: #2FB56B;   /* LED green — "live / online" */
+  --bb-success-600: #24915580;
+  --bb-success-100: #DEF3E7;
+  --bb-warning-500: #F2B705;
+  --bb-warning-100: #FBEFC4;
+  --bb-danger-500:  #E4432E;   /* fault / offline red */
+  --bb-danger-600:  #C4341F;
+  --bb-danger-100:  #FADBD4;
+  --bb-info-500:    #2E82E4;
+  --bb-info-100:    #D6E6FB;
+
+  /* ---- Raw LED-pixel primaries (for display/scoreboard mockups) ---- */
+  --led-red:   #FF2D2D;
+  --led-green: #27E36B;
+  --led-blue:  #2E9BFF;
+  --led-amber: #FFB020;
+
+  /* ================= Semantic aliases ================= */
+
+  /* Brand */
+  --brand:            var(--bb-orange-500);
+  --brand-hover:      var(--bb-orange-600);
+  --brand-active:     var(--bb-orange-700);
+  --brand-contrast:   var(--bb-ink-950);   /* text on orange = ink, not white */
+  --brand-subtle:     var(--bb-orange-50);
+  --brand-ring:       color-mix(in oklch, var(--bb-orange-500) 45%, transparent);
+
+  /* Surfaces — light context */
+  --surface-page:     var(--bb-grey-50);
+  --surface-card:     var(--bb-white);
+  --surface-sunken:   var(--bb-grey-100);
+  --surface-inverse:  var(--bb-ink-950);
+
+  /* Surfaces — dark context (the default "stadium" mode) */
+  --surface-dark:        var(--bb-ink-950);
+  --surface-dark-raised: var(--bb-ink-850);
+  --surface-dark-card:   var(--bb-ink-900);
+
+  /* Text — light context */
+  --text-strong:  var(--bb-ink-900);
+  --text-body:    var(--bb-grey-800);
+  --text-muted:   var(--bb-grey-600);
+  --text-faint:   var(--bb-grey-500);
+  --text-on-dark:      var(--bb-grey-50);
+  --text-on-dark-mut:  var(--bb-grey-400);
+  --text-on-brand:     var(--bb-ink-950);
+
+  /* Borders / lines */
+  --border:        var(--bb-grey-200);
+  --border-strong: var(--bb-grey-300);
+  --border-dark:   var(--bb-ink-800);
+  --divider:       color-mix(in oklch, var(--bb-grey-500) 22%, transparent);
+
+  /* Focus ring */
+  --focus-ring: var(--bb-orange-500);
+}
