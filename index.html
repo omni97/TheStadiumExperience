@@ -527,17 +527,16 @@ nav.main-nav a:hover::after{width:100%;}
 
 /* ============ VIDEO ============ */
 .video-wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center;}
-.video-frame{position:relative; border-radius:18px; overflow:hidden; box-shadow:0 24px 50px rgba(0,0,0,0.3); aspect-ratio:16/9; background:#000; cursor:pointer;}
-.video-frame iframe{width:100%; height:100%; border:0;}
-.video-thumb{width:100%; height:100%; object-fit:cover; display:block;}
-.video-play-btn{
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  width:78px; height:78px; border-radius:50%; background:var(--gold-500); border:none; cursor:pointer;
-  display:flex; align-items:center; justify-content:center; box-shadow:0 10px 30px rgba(0,0,0,0.4);
+.video-frame{position:relative; border-radius:18px; overflow:hidden; box-shadow:0 24px 50px rgba(0,0,0,0.3); aspect-ratio:16/9; background:#000;}
+.video-frame video{width:100%; height:100%; object-fit:cover; display:block;}
+.video-mute-btn{
+  position:absolute; bottom:18px; right:18px;
+  width:44px; height:44px; border-radius:50%; background:rgba(8,31,56,0.7); border:1px solid rgba(255,255,255,0.25); cursor:pointer;
+  display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px);
   transition:transform .2s ease, background .2s ease;
 }
-.video-play-btn svg{margin-left:4px;}
-.video-frame:hover .video-play-btn{transform:translate(-50%,-50%) scale(1.08); background:var(--gold-600);}
+.video-mute-btn:hover{transform:scale(1.08); background:rgba(8,31,56,0.9);}
+.video-mute-btn svg{width:20px; height:20px;}
 .video-copy h2{color:var(--white); font-size:clamp(26px,3.2vw,36px); margin-bottom:18px; font-weight:800;}
 .video-copy p{color:var(--powder-200); font-size:16px; margin-bottom:10px;}
 .video-caption{font-family:var(--font-mono); font-size:13px; color:var(--gold-500); margin-bottom:26px; display:block;}
@@ -1175,10 +1174,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============ VIDEO ============ -->
 <section class="section section-dark" id="video">
   <div class="container video-wrap">
-    <div class="video-frame reveal" id="videoFrame" data-video-id="tjO4gVnRsKA">
-      <img class="video-thumb" src="https://img.youtube.com/vi/tjO4gVnRsKA/maxresdefault.jpg" alt="Light Show - ista-Borussia-Park" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/tjO4gVnRsKA/hqdefault.jpg';">
-      <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7L8 5z" fill="#081F38"/></svg>
+    <div class="video-frame reveal" id="videoFrame">
+      <video id="lightshowVideo" src="assets/lightshow-video.mp4" autoplay muted loop playsinline preload="metadata" disablepictureinpicture></video>
+      <button class="video-mute-btn" id="videoMuteBtn" aria-label="Geluid aan/uit">
+        <svg id="videoMuteIcon" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="#fff"/><path d="M17 8a5 5 0 0 1 0 8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
     <div class="video-copy reveal">
@@ -1186,7 +1185,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 data-i18n="video_title">BEKIJK HET IN ACTIE</h2>
       <p data-i18n="video_body">Bekijk de lichtshow die het ista-Borussia-Park tot leven bracht voor het 125-jarig jubileum van Borussia Mönchengladbach, met dezelfde technologie en hetzelfde vakmanschap achter The Stadium Experience.</p>
       <span class="video-caption" data-i18n="video_caption">Lichtshow – ista-Borussia-Park · Borussia Mönchengladbach, 2025</span>
-      <a href="https://www.youtube.com/watch?v=tjO4gVnRsKA" target="_blank" rel="noopener" class="btn btn-ghost-dark" data-i18n="video_watch">Bekijk op YouTube</a>
     </div>
   </div>
 </section>
@@ -1716,16 +1714,17 @@ if(timelineTrack && timelinePrev && timelineNext){
   timelineNext.addEventListener('click', () => timelineTrack.scrollBy({left:282, behavior:'smooth'}));
 }
 
-/* ============ VIDEO CLICK-TO-LOAD ============ */
-const videoFrame = document.getElementById('videoFrame');
-const videoPlayBtn = document.getElementById('videoPlayBtn');
-if(videoFrame && videoPlayBtn){
-  const loadVideo = () => {
-    const videoId = videoFrame.dataset.videoId;
-    videoFrame.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" title="Light Show - ista-Borussia-Park" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-    videoFrame.style.cursor = 'default';
-  };
-  videoFrame.addEventListener('click', loadVideo);
+/* ============ VIDEO MUTE TOGGLE ============ */
+const lightshowVideo = document.getElementById('lightshowVideo');
+const videoMuteBtn = document.getElementById('videoMuteBtn');
+const videoMuteIcon = document.getElementById('videoMuteIcon');
+if(lightshowVideo && videoMuteBtn && videoMuteIcon){
+  const mutedIcon = `<path d="M4 9v6h4l5 5V4L8 9H4z" fill="#fff"/><path d="M17 8a5 5 0 0 1 0 8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>`;
+  const unmutedIcon = `<path d="M4 9v6h4l5 5V4L8 9H4z" fill="#fff"/><path d="M17 8a5 5 0 0 1 0 8m2.5-11a8 8 0 0 1 0 14" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>`;
+  videoMuteBtn.addEventListener('click', () => {
+    lightshowVideo.muted = !lightshowVideo.muted;
+    videoMuteIcon.innerHTML = lightshowVideo.muted ? mutedIcon : unmutedIcon;
+  });
 }
 
 /* ============ CONTACT FORM (Vercel API route) ============ */
