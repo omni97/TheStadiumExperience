@@ -60,9 +60,36 @@ h1,h2{font-family:var(--font-display);margin:0 0 .4em;color:var(--text-strong);l
   font-weight:700;
 }
 header{padding:28px 0;border-bottom:1px solid var(--hairline);}
-header .container{display:flex;align-items:center;justify-content:space-between;}
+header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;}
 header img.logo{height:36px;width:auto;border-radius:0;}
 .back-link{font-size:14px;font-weight:600;text-decoration:none;color:var(--text-soft);}
+.header-right{display:flex;align-items:center;gap:16px;}
+.lang-switch{position:relative;}
+.lang-switch-trigger{
+  display:flex;align-items:center;gap:6px;
+  font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.04em;
+  padding:8px 12px;border-radius:999px;border:1px solid var(--hairline);background:var(--mist-50);color:var(--text-strong);
+  cursor:pointer;transition:background .2s ease,border-color .2s ease;
+}
+.lang-switch-trigger:hover{background:var(--mist-100);border-color:var(--steel-400);}
+.lang-switch-trigger svg{transition:transform .2s ease;flex-shrink:0;}
+.lang-switch.open .lang-switch-trigger svg{transform:rotate(180deg);}
+.lang-switch-menu{
+  position:absolute;top:calc(100% + 8px);right:0;min-width:96px;
+  background:var(--white);border:1px solid var(--hairline);border-radius:14px;
+  padding:6px;display:flex;flex-direction:column;gap:2px;
+  box-shadow:0 16px 32px rgba(8,31,56,0.18);
+  opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s ease,transform .18s ease,visibility .18s ease;
+  z-index:50;
+}
+.lang-switch.open .lang-switch-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.lang-switch-menu button{
+  font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.04em;
+  padding:8px 12px;border-radius:9px;border:none;background:transparent;color:var(--text-soft);
+  cursor:pointer;text-align:left;transition:background .2s ease,color .2s ease;
+}
+.lang-switch-menu button.active{background:var(--gold-500);color:var(--navy-950);}
+.lang-switch-menu button:hover:not(.active){background:var(--mist-100);color:var(--text-strong);}
 main{padding:48px 0 80px;}
 .hero-figure{margin:28px 0 36px;}
 figcaption{font-size:13px;color:var(--text-soft);margin-top:8px;}
@@ -82,34 +109,48 @@ footer p{font-size:13px;color:var(--text-soft);margin:0;}
 <header>
   <div class="container">
     <a href="../index.html" class="back-link">← The Stadium Experience</a>
-    <img class="logo" src="../assets/logo.webp" alt="The Stadium Experience">
+    <div class="header-right">
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-switch-trigger" id="langSwitchTrigger" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langSwitchLabel">EN</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang-switch-menu" id="langSwitchMenu" role="listbox" aria-label="Language">
+          <button data-lang="en" class="active" role="option">EN</button>
+          <button data-lang="de" role="option">DE</button>
+          <button data-lang="fr" role="option">FR</button>
+          <button data-lang="nl" role="option">NL</button>
+        </div>
+      </div>
+      <img class="logo" src="../assets/logo.webp" alt="The Stadium Experience">
+    </div>
   </div>
 </header>
 
 <main>
   <div class="container">
     <article>
-      <span class="eyebrow">Project · ista-Borussia-Park</span>
-      <h1>600 m² of LED on the ista-Borussia-Park facade</h1>
-      <p class="lead">Borussia Mönchengladbach has had a new LED-screen on the stadium facade since this year: over 600 m² of display, spread across several surfaces.</p>
+      <span class="eyebrow" data-i18n="eyebrow">Project · ista-Borussia-Park</span>
+      <h1 data-i18n="h1">600 m² of LED on the ista-Borussia-Park facade</h1>
+      <p class="lead" data-i18n="lead">Borussia Mönchengladbach has had a new LED-screen on the stadium facade since this year: over 600 m² of display, spread across several surfaces.</p>
 
       <figure class="hero-figure">
         <img src="assets/borussia-monchengladbach-matchday.webp" alt="Facade of ista-Borussia-Park with the new LED-screen on matchday">
-        <figcaption>ista-Borussia-Park on matchday.</figcaption>
+        <figcaption data-i18n="figcaption">ista-Borussia-Park on matchday.</figcaption>
       </figure>
 
-      <h2>What's on display</h2>
-      <p>The screen is made up of modular LED-panels that fit together seamlessly. As they're installed outdoors, they have to withstand all conditions: IP65 rating, frost, storms and sunshine. The screen is designed to remain clearly legible even in direct sunlight, with a pixel pitch of P10, tailored to the viewing distance of the supporters. Despite its size, the full 600 m² installation was completed in three weeks.</p>
+      <h2 data-i18n="h2_1">What's on display</h2>
+      <p data-i18n="p1">The screen is made up of modular LED-panels that fit together seamlessly. As they're installed outdoors, they have to withstand all conditions: IP65 rating, frost, storms and sunshine. The screen is designed to remain clearly legible even in direct sunlight, with a pixel pitch of P10, tailored to the viewing distance of the supporters. Despite its size, the full 600 m² installation was completed in three weeks.</p>
 
-      <h2>Certified to German standards</h2>
-      <p>The project had to meet Germany's strict construction standards. The engineering drawings were reviewed and approved by the German authorities before installation, and all welding on the supporting structure was carried out and certified to the same strict standards.</p>
+      <h2 data-i18n="h2_2">Certified to German standards</h2>
+      <p data-i18n="p2">The project had to meet Germany's strict construction standards. The engineering drawings were reviewed and approved by the German authorities before installation, and all welding on the supporting structure was carried out and certified to the same strict standards.</p>
 
-      <h2>And the lighting too</h2>
-      <p>The screen isn't the only thing that happened at ista-Borussia-Park this year. In mid-2025, The Stadium Experience also installed the new stadium lighting: fully LED and compliant with UEFA Level A Elite, the highest UEFA standard. It comes down to 180 LED stadium lights and 136 RGB fixtures, connected by over 1.2 kilometres of DMX cable.</p>
-      <p>All of the infrastructure is controlled by a single system, which monitors the installation around the clock and is programmed to shut the screen down automatically if it detects temperatures exceeding a set threshold.</p>
+      <h2 data-i18n="h2_3">And the lighting too</h2>
+      <p data-i18n="p3">The screen isn't the only thing that happened at ista-Borussia-Park this year. In mid-2025, The Stadium Experience also installed the new stadium lighting: fully LED and compliant with UEFA Level A Elite, the highest UEFA standard. It comes down to 180 LED stadium lights and 136 RGB fixtures, connected by over 1.2 kilometres of DMX cable.</p>
+      <p data-i18n="p4">All of the infrastructure is controlled by a single system, which monitors the installation around the clock and is programmed to shut the screen down automatically if it detects temperatures exceeding a set threshold.</p>
 
-      <h2>First time in action</h2>
-      <p>The result was unveiled for the first time during the friendly against Valencia on 2 August 2025, part of the club's 125th anniversary celebrations, with a light show. Borussia Mönchengladbach won 2-0.</p>
+      <h2 data-i18n="h2_4">First time in action</h2>
+      <p data-i18n="p5">The result was unveiled for the first time during the friendly against Valencia on 2 August 2025, part of the club's 125th anniversary celebrations, with a light show. Borussia Mönchengladbach won 2-0.</p>
 
       <div class="video-block">
         <video controls playsinline>
@@ -125,6 +166,110 @@ footer p{font-size:13px;color:var(--text-soft);margin:0;}
     <p>The Stadium Experience</p>
   </div>
 </footer>
+
+<script>
+const translations = {
+  en: {
+    eyebrow: "Project · ista-Borussia-Park",
+    h1: "600 m² of LED on the ista-Borussia-Park facade",
+    lead: "Borussia Mönchengladbach has had a new LED-screen on the stadium facade since this year: over 600 m² of display, spread across several surfaces.",
+    figcaption: "ista-Borussia-Park on matchday.",
+    h2_1: "What's on display",
+    p1: "The screen is made up of modular LED-panels that fit together seamlessly. As they're installed outdoors, they have to withstand all conditions: IP65 rating, frost, storms and sunshine. The screen is designed to remain clearly legible even in direct sunlight, with a pixel pitch of P10, tailored to the viewing distance of the supporters. Despite its size, the full 600 m² installation was completed in three weeks.",
+    h2_2: "Certified to German standards",
+    p2: "The project had to meet Germany's strict construction standards. The engineering drawings were reviewed and approved by the German authorities before installation, and all welding on the supporting structure was carried out and certified to the same strict standards.",
+    h2_3: "And the lighting too",
+    p3: "The screen isn't the only thing that happened at ista-Borussia-Park this year. In mid-2025, The Stadium Experience also installed the new stadium lighting: fully LED and compliant with UEFA Level A Elite, the highest UEFA standard. It comes down to 180 LED stadium lights and 136 RGB fixtures, connected by over 1.2 kilometres of DMX cable.",
+    p4: "All of the infrastructure is controlled by a single system, which monitors the installation around the clock and is programmed to shut the screen down automatically if it detects temperatures exceeding a set threshold.",
+    h2_4: "First time in action",
+    p5: "The result was unveiled for the first time during the friendly against Valencia on 2 August 2025, part of the club's 125th anniversary celebrations, with a light show. Borussia Mönchengladbach won 2-0."
+  },
+  de: {
+    eyebrow: "Projekt · ista-Borussia-Park",
+    h1: "600 m² LED an der Fassade des ista-Borussia-Parks",
+    lead: "Borussia Mönchengladbach hat seit diesem Jahr einen neuen LED-Bildschirm an der Stadionfassade: über 600 m² Anzeigefläche, verteilt auf mehrere Flächen.",
+    figcaption: "ista-Borussia-Park am Spieltag.",
+    h2_1: "Was zu sehen ist",
+    p1: "Der Bildschirm besteht aus modularen LED-Panels, die nahtlos ineinandergreifen. Da sie im Freien installiert sind, müssen sie allen Witterungsbedingungen standhalten: Schutzklasse IP65, Frost, Stürme und pralle Sonne. Der Bildschirm bleibt auch bei direkter Sonneneinstrahlung gut ablesbar, mit einem Pixelabstand von P10, abgestimmt auf den Betrachtungsabstand der Fans. Trotz seiner Größe wurde die komplette 600 m² große Installation in drei Wochen fertiggestellt.",
+    h2_2: "Zertifiziert nach deutschen Normen",
+    p2: "Das Projekt musste die strengen deutschen Baunormen erfüllen. Die technischen Zeichnungen wurden vor der Installation von den deutschen Behörden geprüft und genehmigt, und sämtliche Schweißarbeiten an der Tragkonstruktion wurden nach denselben strengen Normen ausgeführt und zertifiziert.",
+    h2_3: "Und auch die Beleuchtung",
+    p3: "Der Bildschirm ist nicht das Einzige, was in diesem Jahr im ista-Borussia-Park passiert ist. Mitte 2025 installierte The Stadium Experience auch die neue Stadionbeleuchtung: vollständig LED-basiert und konform mit UEFA Level A Elite, dem höchsten UEFA-Standard. Dabei handelt es sich um 180 LED-Flutlichtleuchten und 136 RGB-Leuchten, verbunden durch mehr als 1,2 Kilometer DMX-Kabel.",
+    p4: "Die gesamte Infrastruktur wird von einem einzigen System gesteuert, das die Anlage rund um die Uhr überwacht und so programmiert ist, dass es den Bildschirm automatisch abschaltet, sobald ein festgelegter Temperaturschwellenwert überschritten wird.",
+    h2_4: "Erster Einsatz",
+    p5: "Das Ergebnis wurde erstmals beim Freundschaftsspiel gegen Valencia am 2. August 2025 im Rahmen der Feierlichkeiten zum 125-jährigen Vereinsjubiläum mit einer Lichtshow präsentiert. Borussia Mönchengladbach gewann mit 2:0."
+  },
+  fr: {
+    eyebrow: "Projet · ista-Borussia-Park",
+    h1: "600 m² de LED sur la façade de l'ista-Borussia-Park",
+    lead: "Depuis cette année, Borussia Mönchengladbach dispose d'un nouvel écran LED sur la façade du stade : plus de 600 m² d'affichage, répartis sur plusieurs surfaces.",
+    figcaption: "ista-Borussia-Park un jour de match.",
+    h2_1: "Ce qui est installé",
+    p1: "L'écran se compose de panneaux LED modulaires qui s'assemblent parfaitement. Installés à l'extérieur, ils doivent résister à toutes les conditions : indice de protection IP65, gel, tempêtes et plein soleil. L'écran reste parfaitement lisible même en plein soleil, grâce à un pas de pixel P10 adapté à la distance de vision des supporters. Malgré son ampleur, l'installation complète de 600 m² a été réalisée en trois semaines.",
+    h2_2: "Certifié selon les normes allemandes",
+    p2: "Le projet devait répondre aux normes de construction allemandes, particulièrement strictes. Les plans d'ingénierie ont été vérifiés et approuvés par les autorités allemandes avant l'installation, et toutes les soudures de la structure porteuse ont été réalisées et certifiées selon ces mêmes normes strictes.",
+    h2_3: "Et aussi l'éclairage",
+    p3: "L'écran n'est pas la seule nouveauté à l'ista-Borussia-Park cette année. À la mi-2025, The Stadium Experience a également installé le nouvel éclairage du stade : entièrement LED et conforme à la norme UEFA Level A Elite, la plus exigeante de l'UEFA. Il s'agit de 180 projecteurs LED de stade et 136 luminaires RGB, reliés par plus de 1,2 kilomètre de câble DMX.",
+    p4: "L'ensemble de l'infrastructure est piloté par un seul système, qui surveille l'installation 24h/24 et 7j/7 et est programmé pour arrêter automatiquement l'écran en cas de dépassement d'un seuil de température défini.",
+    h2_4: "Première mise en scène",
+    p5: "Le résultat a été dévoilé pour la première fois lors du match amical contre Valence le 2 août 2025, dans le cadre des célébrations du 125e anniversaire du club, avec un spectacle lumineux. Borussia Mönchengladbach a gagné 2-0."
+  },
+  nl: {
+    eyebrow: "Project · ista-Borussia-Park",
+    h1: "600 m² LED op de gevel van het ista-Borussia-Park",
+    lead: "Borussia Mönchengladbach heeft sinds dit jaar een nieuw LED-scherm op de stadiongevel: meer dan 600 m² aan beeldschermen, verspreid over verschillende oppervlakken.",
+    figcaption: "ista-Borussia-Park op wedstrijddag.",
+    h2_1: "Wat is er te zien",
+    p1: "Het scherm bestaat uit modulaire LED-panelen die naadloos op elkaar aansluiten. Omdat ze buiten geïnstalleerd zijn, moeten ze tegen alle weersomstandigheden bestand zijn: IP65-rating, vorst, storm en felle zon. Het scherm blijft ook in fel zonlicht duidelijk afleesbaar, met een pixel pitch van P10, afgestemd op de kijkafstand van de supporters. Ondanks de omvang werd de volledige installatie van 600 m² in drie weken afgewerkt.",
+    h2_2: "Gecertificeerd volgens Duitse normen",
+    p2: "Het project moest voldoen aan de strenge Duitse bouwnormen. De technische tekeningen werden vóór de installatie nagekeken en goedgekeurd door de Duitse overheid, en alle laswerken aan de draagconstructie werden uitgevoerd en gecertificeerd volgens diezelfde strenge normen.",
+    h2_3: "En ook de verlichting",
+    p3: "Het scherm is niet het enige wat dit jaar gebeurde bij het ista-Borussia-Park. Medio 2025 installeerde The Stadium Experience ook de nieuwe stadionverlichting: volledig LED en conform UEFA Level A Elite, de hoogste UEFA-norm. Het gaat om 180 LED-stadionlampen en 136 RGB-armaturen, verbonden met meer dan 1,2 kilometer DMX-kabel.",
+    p4: "Alle infrastructuur wordt aangestuurd door één systeem, dat de installatie 24/7 monitort en geprogrammeerd is om het scherm automatisch uit te schakelen zodra een ingestelde temperatuurdrempel wordt overschreden.",
+    h2_4: "Voor het eerst in actie",
+    p5: "Het resultaat werd voor het eerst onthuld tijdens de vriendschappelijke wedstrijd tegen Valencia op 2 augustus 2025, als onderdeel van de viering van het 125-jarig bestaan van de club, met een lichtshow. Borussia Mönchengladbach won met 2-0."
+  }
+};
+
+function applyLang(lang){
+  document.documentElement.lang = lang;
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if(t[key] !== undefined) el.textContent = t[key];
+  });
+  document.querySelectorAll('.lang-switch-menu button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  const label = document.getElementById('langSwitchLabel');
+  if(label) label.textContent = lang.toUpperCase();
+}
+
+const langSwitch = document.getElementById('langSwitch');
+const langSwitchTrigger = document.getElementById('langSwitchTrigger');
+
+function closeLangSwitch(){
+  langSwitch.classList.remove('open');
+  langSwitchTrigger.setAttribute('aria-expanded', 'false');
+}
+
+langSwitchTrigger.addEventListener('click', () => {
+  const willOpen = !langSwitch.classList.contains('open');
+  langSwitch.classList.toggle('open', willOpen);
+  langSwitchTrigger.setAttribute('aria-expanded', String(willOpen));
+});
+
+document.querySelectorAll('.lang-switch-menu button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    applyLang(btn.dataset.lang);
+    closeLangSwitch();
+  });
+});
+
+document.addEventListener('click', (e) => {
+  if(!langSwitch.contains(e.target)) closeLangSwitch();
+});
+</script>
 
 </body>
 </html>
