@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#081F38">
 <title>600 m² of LED on the ista-Borussia-Park facade — The Stadium Experience</title>
 <meta name="description" content="Borussia Mönchengladbach has a new LED-screen on the stadium facade this year, alongside new stadium lighting and show control.">
 <meta name="robots" content="noindex, nofollow">
@@ -26,87 +27,188 @@
   --mist-50:#EEF2F6;
   --mist-100:#E3EAF1;
 
-  --page-bg:#FFFFFF;
-  --text-strong:#081F38;
-  --text-soft:#5C7186;
-  --hairline: #E3EAF1;
+  --page-bg:#081F38;
+  --text-strong:#FFFFFF;
+  --text-soft:#8FA8BF;
+  --hairline: rgba(255,255,255,0.12);
 
   --font-display:'Big Shoulders Display', sans-serif;
   --font-body:'Barlow', sans-serif;
   --font-mono:'Space Mono', monospace;
 
   --container: 760px;
-  --radius: 14px;
+  --radius: 20px;
 }
 *,*::before,*::after{box-sizing:border-box;}
+html{background:var(--page-bg);}
 body{
   margin:0;
   font-family:var(--font-body);
-  background:var(--page-bg);
+  background:
+    radial-gradient(900px 480px at 88% -140px, rgba(74,123,166,0.30), transparent 70%),
+    radial-gradient(700px 420px at -10% 36%, rgba(242,183,5,0.07), transparent 70%),
+    var(--page-bg);
+  background-repeat:no-repeat;
   color:var(--text-strong);
-  line-height:1.6;
+  line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
+::selection{background:var(--gold-500);color:var(--navy-950);}
+a:focus-visible, button:focus-visible{outline:3px solid var(--gold-500);outline-offset:2px;}
 img,video{max-width:100%;display:block;border-radius:var(--radius);}
 a{color:var(--text-strong);}
 .container{max-width:var(--container);margin:0 auto;padding:0 24px;}
-h1,h2{font-family:var(--font-display);margin:0 0 .4em;color:var(--text-strong);letter-spacing:0.01em;}
+h1,h2{font-family:var(--font-display);margin:0;color:var(--text-strong);}
 .eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
   font-family:var(--font-mono);
   font-size:12px;
   letter-spacing:0.18em;
   text-transform:uppercase;
-  color:var(--gold-600);
+  color:var(--gold-500);
   font-weight:700;
 }
-header{padding:28px 0;border-bottom:1px solid var(--hairline);}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--gold-500);}
+header{
+  padding:18px 0;
+  border-bottom:1px solid var(--hairline);
+  background:rgba(8,31,56,0.86);
+  backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:40;
+}
 header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;}
-header img.logo{height:36px;width:auto;border-radius:0;}
-.back-link{font-size:14px;font-weight:600;text-decoration:none;color:var(--text-soft);}
+header img.logo{height:40px;width:auto;border-radius:10px;background:var(--white);padding:3px 8px;}
+.back-link{
+  font-size:14px;font-weight:600;text-decoration:none;color:var(--powder-200);
+  background-image:linear-gradient(var(--gold-500),var(--gold-500));background-repeat:no-repeat;background-position:0 100%;background-size:0 2px;
+  padding-bottom:3px;transition:color .2s ease,background-size .25s ease;
+}
+.back-link:hover{color:var(--white);background-size:100% 2px;}
 .header-right{display:flex;align-items:center;gap:16px;}
 .lang-switch{position:relative;}
 .lang-switch-trigger{
   display:flex;align-items:center;gap:6px;
   font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.04em;
-  padding:8px 12px;border-radius:999px;border:1px solid var(--hairline);background:var(--mist-50);color:var(--text-strong);
+  padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:var(--white);
   cursor:pointer;transition:background .2s ease,border-color .2s ease;
 }
-.lang-switch-trigger:hover{background:var(--mist-100);border-color:var(--steel-400);}
+.lang-switch-trigger:hover{background:rgba(255,255,255,0.16);border-color:rgba(255,255,255,0.3);}
 .lang-switch-trigger svg{transition:transform .2s ease;flex-shrink:0;}
 .lang-switch.open .lang-switch-trigger svg{transform:rotate(180deg);}
 .lang-switch-menu{
   position:absolute;top:calc(100% + 8px);right:0;min-width:96px;
-  background:var(--white);border:1px solid var(--hairline);border-radius:14px;
+  background:var(--navy-900);border:1px solid rgba(255,255,255,0.15);border-radius:14px;
   padding:6px;display:flex;flex-direction:column;gap:2px;
-  box-shadow:0 16px 32px rgba(8,31,56,0.18);
+  box-shadow:0 16px 32px rgba(0,0,0,0.4);
   opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s ease,transform .18s ease,visibility .18s ease;
   z-index:50;
 }
 .lang-switch.open .lang-switch-menu{opacity:1;visibility:visible;transform:translateY(0);}
 .lang-switch-menu button{
   font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.04em;
-  padding:8px 12px;border-radius:9px;border:none;background:transparent;color:var(--text-soft);
+  padding:8px 12px;border-radius:9px;border:none;background:transparent;color:var(--powder-200);
   cursor:pointer;text-align:left;transition:background .2s ease,color .2s ease;
 }
 .lang-switch-menu button.active{background:var(--gold-500);color:var(--navy-950);}
-.lang-switch-menu button:hover:not(.active){background:var(--mist-100);color:var(--text-strong);}
-main{padding:48px 0 80px;}
-.hero-figure{margin:28px 0 36px;}
-figcaption{font-size:13px;color:var(--text-soft);margin-top:8px;}
-h1{font-size:clamp(28px,4.5vw,44px);line-height:1.1;}
-.lead{font-size:19px;color:var(--text-strong);font-weight:500;margin:0 0 32px;}
-article p{font-size:17px;margin:0 0 20px;}
-article ul{font-size:17px;margin:0 0 24px;padding-left:20px;}
-article li{margin-bottom:8px;}
-h2{font-size:24px;margin-top:44px;}
-.video-block{margin:36px 0;}
+.lang-switch-menu button:hover:not(.active){background:rgba(255,255,255,0.1);color:var(--white);}
+main{padding:56px 0 96px;}
+h1{
+  font-size:clamp(36px,6.4vw,64px);
+  line-height:1.02;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:0.005em;
+  margin:16px 0 24px;
+}
+.lead{
+  font-size:20px;color:var(--white);font-weight:500;
+  margin:0 0 40px;padding-left:18px;border-left:3px solid var(--gold-500);
+}
+.hero-figure{margin:0 0 8px;}
+.hero-figure img{
+  border:1px solid var(--hairline);
+  box-shadow:0 30px 60px -24px rgba(0,0,0,0.65);
+}
+figcaption{
+  font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--text-soft);margin-top:12px;
+}
+article{counter-reset:section;}
+article p{font-size:17.5px;color:var(--powder-200);margin:0 0 20px;}
+h2{
+  counter-increment:section;
+  display:flex;align-items:center;gap:14px;
+  font-size:clamp(24px,4vw,30px);font-weight:800;letter-spacing:0.02em;text-transform:uppercase;
+  margin:60px 0 16px;
+}
+h2::before{
+  content:counter(section,decimal-leading-zero);
+  font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.06em;
+  color:var(--navy-950);background:var(--gold-500);
+  padding:4px 9px;border-radius:6px;flex-shrink:0;
+}
+strong{
+  color:var(--white);font-weight:700;
+}
+.video-block{margin:48px 0 0;}
+.video-block video{
+  width:100%;
+  border:1px solid var(--hairline);
+  box-shadow:0 30px 60px -24px rgba(0,0,0,0.65);
+}
 footer{border-top:1px solid var(--hairline);padding:32px 0;text-align:center;}
-footer p{font-size:13px;color:var(--text-soft);margin:0;}
+footer p{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--text-soft);margin:0;
+}
+footer p::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold-500);}
+.progress{
+  position:fixed;top:0;left:0;right:0;height:3px;z-index:60;
+  background:var(--gold-500);transform-origin:left center;transform:scaleX(var(--p,0));
+  box-shadow:0 0 12px rgba(242,183,5,0.6);pointer-events:none;
+}
+header{transition:box-shadow .3s ease,padding .3s ease;}
+header.scrolled{box-shadow:0 10px 30px -12px rgba(0,0,0,0.6);padding:12px 0;}
+h2::after{
+  content:"";flex:1;height:1px;
+  background:linear-gradient(90deg,var(--gold-500),rgba(242,183,5,0));
+  transform-origin:left center;
+}
+html.js .reveal{
+  opacity:0;transform:translateY(28px);
+  transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);
+}
+html.js .reveal.in{opacity:1;transform:none;}
+html.js h2.reveal::after{transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1) .25s;}
+html.js h2.reveal.in::after{transform:scaleX(1);}
+html.js h2.reveal::before{transform:scale(.6);transition:transform .5s cubic-bezier(.3,1.6,.5,1) .15s;}
+html.js h2.reveal.in::before{transform:scale(1);}
+html.js .hero-figure.reveal img{transform:scale(1.05);transition:transform 1.4s cubic-bezier(.2,.7,.2,1);}
+html.js .hero-figure.reveal.in img{transform:scale(1);}
+@media (prefers-reduced-motion:reduce){
+  html.js .reveal,html.js .reveal *,html.js .reveal::before,html.js .reveal::after{
+    opacity:1 !important;transform:none !important;transition:none !important;
+  }
+  .progress{display:none;}
+}
+@media (max-width:600px){
+  .container{padding:0 20px;}
+  main{padding:40px 0 72px;}
+  .lead{font-size:18px;}
+  .back-link{font-size:13px;white-space:nowrap;}
+  .header-right{gap:10px;}
+  header img.logo{height:34px;}
+  h2{margin-top:48px;}
+  article p{font-size:17px;}
+}
 </style>
+<script>document.documentElement.classList.add('js');</script>
 <!-- Contentsquare / Hotjar tag -->
 <script src="https://t.contentsquare.net/uxa/3e8d059f9b40d.js"></script>
 </head>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <header>
   <div class="container">
@@ -267,6 +369,39 @@ document.querySelectorAll('.lang-switch-menu button').forEach(btn => {
     closeLangSwitch();
   });
 });
+
+// Scroll reveal: elements fade/slide in as they enter the viewport
+const revealEls = document.querySelectorAll('.eyebrow, article h1, .lead, .hero-figure, article h2, article p:not(.lead), .video-block');
+revealEls.forEach(el => el.classList.add('reveal'));
+if('IntersectionObserver' in window){
+  const io = new IntersectionObserver((entries) => {
+    let i = 0;
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      entry.target.style.transitionDelay = (i++ * 90) + 'ms';
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -6% 0px'});
+  revealEls.forEach(el => io.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('in'));
+}
+
+// Reading progress bar and header shadow
+const progressEl = document.getElementById('progress');
+const headerEl = document.querySelector('header');
+let ticking = false;
+function onScroll(){
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progressEl.style.setProperty('--p', max > 0 ? Math.min(1, window.scrollY / max) : 0);
+  headerEl.classList.toggle('scrolled', window.scrollY > 24);
+  ticking = false;
+}
+window.addEventListener('scroll', () => {
+  if(!ticking){ ticking = true; requestAnimationFrame(onScroll); }
+}, {passive:true});
+onScroll();
 
 document.addEventListener('click', (e) => {
   if(!langSwitch.contains(e.target)) closeLangSwitch();
