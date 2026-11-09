@@ -8,7 +8,7 @@ window.TSE_REF_I18N.nl = {
 
   hero_eyebrow: "Referenties",
   hero_title: "STADIONS",
-  hero_lead: "LED-verlichting voor stadions biedt krachtige, energiezuinige verlichting die voldoet aan de hoge eisen van professionele sportevenementen. Met een gelijkmatige lichtverdeling en minder verblinding zorgt deze technologie voor een optimale ervaring voor spelers, toeschouwers en omroepen. Wij leveren op maat gemaakte verlichtingsoplossingen voor stadions, inclusief advies, lichtontwerp en begeleiding bij de installatie. De mat wordt nog mooier op tv!",
+  hero_lead: "Van stadionverlichting tot LED-boarding, LED-schermen en lichtshows: wij brengen licht, beeld en sfeer samen in één stadionbeleving. Onze installaties zijn gebouwd voor de hoge eisen van het profvoetbal en van tv-uitzendingen, en bezorgen spelers, supporters, partners en kijkers thuis een wedstrijddag om te onthouden. Ontdek hieronder hoe clubs, bonden en evenementenlocaties in heel Europa met ons samenwerken.",
   hero_more: "Bekijk referenties",
   hero_quote: "Offerte aanvragen",
 

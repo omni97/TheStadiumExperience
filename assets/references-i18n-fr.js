@@ -8,7 +8,7 @@ window.TSE_REF_I18N.fr = {
 
   hero_eyebrow: "Références",
   hero_title: "STADES",
-  hero_lead: "L’éclairage LED pour stades offre une lumière puissante et économe en énergie, qui répond aux exigences élevées des événements sportifs professionnels. Grâce à une répartition uniforme de la lumière et à un éblouissement réduit, il garantit une expérience optimale aux joueurs, aux spectateurs et aux diffuseurs. Nous proposons des solutions d’éclairage de stade sur mesure, avec conseil expert, étude d’éclairage et accompagnement complet de l’installation. Autre avantage : la meilleure qualité de lumière améliore les retransmissions télévisées, et le terrain est encore plus beau à l’écran.",
+  hero_lead: "De l’éclairage de stade au LED boarding, aux écrans LED et aux spectacles de lumière : nous réunissons lumière, image et ambiance dans une seule expérience de stade. Nos installations sont conçues pour les exigences élevées du football professionnel et des retransmissions télévisées, et offrent aux joueurs, aux supporters, aux partenaires et aux téléspectateurs un jour de match inoubliable. Découvrez ci-dessous comment des clubs, des fédérations et des sites événementiels de toute l’Europe travaillent avec nous.",
   hero_more: "Voir les références",
   hero_quote: "Demander un devis",
 

@@ -8,7 +8,7 @@ window.TSE_REF_I18N.de = {
 
   hero_eyebrow: "Referenzen",
   hero_title: "STADIEN",
-  hero_lead: "LED-Stadionbeleuchtung liefert leistungsstarkes, energieeffizientes Licht, das die hohen Anforderungen professioneller Sportveranstaltungen erfüllt. Dank gleichmäßiger Lichtverteilung und geringer Blendung sorgt sie für ein optimales Erlebnis für Spieler, Zuschauer und Rundfunkanstalten. Wir liefern maßgeschneiderte Lösungen für die Stadionbeleuchtung, inklusive fachkundiger Beratung, Lichtplanung und vollständiger Unterstützung bei der Installation. Ein zusätzlicher Vorteil: Die bessere Lichtqualität verbessert auch die TV-Übertragung, sodass das Spielfeld auf dem Bildschirm noch besser aussieht.",
+  hero_lead: "Von Stadionbeleuchtung über LED-Banden und LED-Screens bis zu Lichtshows: Wir vereinen Licht, Bild und Atmosphäre zu einem Stadionerlebnis. Unsere Installationen sind für die hohen Anforderungen des Profifußballs und der TV-Übertragung gebaut und bescheren Spielern, Fans, Partnern und Zuschauern zu Hause einen unvergesslichen Spieltag. Entdecken Sie unten, wie Vereine, Verbände und Veranstaltungsorte in ganz Europa mit uns zusammenarbeiten.",
   hero_more: "Referenzen ansehen",
   hero_quote: "Angebot anfordern",
 
