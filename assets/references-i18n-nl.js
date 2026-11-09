@@ -14,7 +14,7 @@ window.TSE_REF_I18N.nl = {
 
   refs_eyebrow: "Projecten",
   refs_title: "Referenties",
-  refs_intro: "We zijn trots op onze referenties. Van prachtige stadions tot trainingscomplexen voor profclubs. We hebben deze clubs van A tot Z begeleid. Het begint met een goed lichtontwerp volgens de verschillende normen. Vervolgens stellen we een offerte op en maken we de besparingen inzichtelijk. En uiteraard leveren we daarna wat we vooraf beloven: een duurzame verlichtingsinstallatie waar spelers, toeschouwers en mensen thuis op de bank van kunnen genieten.",
+  refs_intro: "We zijn trots op onze referenties. Van profvoetbalstadions tot trainingscomplexen en multifunctionele arena’s: we begeleidden deze clubs en locaties van A tot Z, met stadionverlichting, LED-boarding, LED-schermen en lichtshows. Elk project begint met een goed ontwerp volgens de geldende normen. Daarna maken we een duidelijke offerte en leveren we wat we beloven: een installatie waar spelers, supporters, partners en kijkers thuis van genieten. Met de filters ziet u de referenties per type.",
   filter_label: "Filter op type",
   filter_all: "Alle",
   type_lighting: "Stadionverlichting",

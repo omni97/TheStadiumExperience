@@ -14,7 +14,7 @@ window.TSE_REF_I18N.de = {
 
   refs_eyebrow: "Projekte",
   refs_title: "Referenzen",
-  refs_intro: "Wir sind stolz auf unsere Referenzen. Von beeindruckenden Stadien bis hin zu Trainingskomplexen von Profivereinen. Wir haben diese Vereine von A bis Z begleitet. Es beginnt mit einem guten Lichtdesign nach den jeweiligen Normen. Anschließend erstellen wir ein Angebot und machen die Einsparungen transparent. Und selbstverständlich setzen wir danach um, was wir zu Beginn versprechen: eine nachhaltige Beleuchtungsanlage, an der Spieler, Zuschauer und Menschen zu Hause auf dem Sofa Freude haben.",
+  refs_intro: "Wir sind stolz auf unsere Referenzen. Von Profifußballstadien bis zu Trainingszentren und Multifunktionsarenen haben wir diese Vereine und Standorte von A bis Z begleitet: mit Stadionbeleuchtung, LED-Banden, LED-Screens und Lichtshows. Jedes Projekt beginnt mit einer soliden Planung nach den geltenden Normen. Danach erstellen wir ein klares Angebot und liefern, was wir versprechen: eine Installation, an der Spieler, Fans, Partner und Zuschauer zu Hause Freude haben. Mit den Filtern sehen Sie die Referenzen nach Typ.",
   filter_label: "Nach Typ filtern",
   filter_all: "Alle",
   type_lighting: "Sportbeleuchtung",

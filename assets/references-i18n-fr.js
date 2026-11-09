@@ -14,7 +14,7 @@ window.TSE_REF_I18N.fr = {
 
   refs_eyebrow: "Projets",
   refs_title: "Références",
-  refs_intro: "Nous sommes fiers de nos références. Des stades magnifiques aux centres d’entraînement de clubs professionnels, nous avons accompagné ces clubs de A à Z. Tout commence par une bonne étude d’éclairage conforme aux différentes normes. Nous établissons ensuite un devis qui montre clairement les économies. Et bien sûr, nous livrons ensuite ce que nous avons promis au départ : une installation d’éclairage durable dont profitent les joueurs, les spectateurs et ceux qui regardent le match depuis leur canapé.",
+  refs_intro: "Nous sommes fiers de nos références. Des stades de football professionnel aux centres d’entraînement et aux arènes multifonctionnelles, nous avons accompagné ces clubs et ces sites de A à Z : éclairage de stade, LED boarding, écrans LED et spectacles de lumière. Chaque projet commence par une conception solide, conforme aux normes en vigueur. Nous établissons ensuite un devis clair et livrons ce que nous promettons : une installation dont profitent les joueurs, les supporters, les partenaires et les téléspectateurs. Utilisez les filtres pour voir les références par type.",
   filter_label: "Filtrer par type",
   filter_all: "Tous",
   type_lighting: "Éclairage sportif",
