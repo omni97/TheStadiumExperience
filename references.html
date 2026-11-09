@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWTGJNN2');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>References – Stadiums | The Stadium Experience</title>
+<meta name="description" content="Stadium references of The Stadium Experience: LED stadium lighting, RGB and DMX light shows at Borussia-Park, ADO Den Haag, FC Utrecht, GelreDome, ÖVB-Arena Bremen and more.">
+<link rel="icon" href="assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/references/hero.webp">
+<style>
+/* ============ TOKENS (same as index.html) ============ */
+:root{
+  --navy-950:#081F38; --navy-900:#0B2C4D; --navy-800:#123456;
+  --steel-600:#4A7BA6; --steel-400:#6E8CA6; --powder-200:#C7D6E3;
+  --gold-500:#F2B705; --gold-600:#D9A400; --white:#FFFFFF;
+  --ink-700:#3B4B5C; --ink-500:#5C7186; --mist-50:#EEF2F6; --mist-100:#E3EAF1;
+  --font-display:'Big Shoulders Display', sans-serif;
+  --font-body:'Barlow', sans-serif;
+  --font-mono:'Space Mono', monospace;
+  --container:1200px; --radius:14px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth; overflow-x:clip;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+}
+body{margin:0; font-family:var(--font-body); background:var(--white); color:var(--ink-700); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:clip;}
+img{max-width:100%; display:block;}
+a{color:inherit;}
+.container{max-width:var(--container); margin:0 auto; padding:0 28px;}
+section{position:relative;}
+h1,h2,h3,h4{font-family:var(--font-display); margin:0; letter-spacing:0.01em;}
+.eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-600); font-weight:700; display:inline-flex; align-items:center; gap:10px;}
+.eyebrow.on-dark{color:var(--gold-500);}
+a:focus-visible, button:focus-visible{outline:3px solid var(--gold-500); outline-offset:2px;}
+
+/* reveal */
+.reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.is-visible{opacity:1; transform:translateY(0);}
+.reveal-stagger > *{opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease;}
+.reveal-stagger.is-visible > *{opacity:1; transform:translateY(0);}
+.reveal-stagger.is-visible > *:nth-child(2){transition-delay:.08s;}
+.reveal-stagger.is-visible > *:nth-child(3){transition-delay:.16s;}
+.reveal-stagger.is-visible > *:nth-child(4){transition-delay:.24s;}
+.reveal-stagger.is-visible > *:nth-child(5){transition-delay:.32s;}
+
+/* ============ HEADER (same as index.html) ============ */
+header{position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(8,31,56,0); transition:background .35s ease, backdrop-filter .35s ease, box-shadow .35s ease, padding .35s ease; padding:20px 0;}
+header.scrolled{background:rgba(8,31,56,0.92); backdrop-filter:blur(10px); box-shadow:0 8px 30px rgba(0,0,0,0.25); padding:12px 0;}
+header .container{display:flex; align-items:center; justify-content:space-between; gap:20px;}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
+.brand img{height:80px; transition:height .3s ease; filter:brightness(0) invert(1);}
+header.scrolled .brand img{height:64px;}
+nav.main-nav{display:flex; align-items:center; gap:28px;}
+nav.main-nav a{color:var(--powder-200); text-decoration:none; font-size:14.5px; font-weight:600; letter-spacing:0.01em; position:relative;}
+nav.main-nav a::after{content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:var(--gold-500); transition:width .25s ease;}
+nav.main-nav a:hover::after, nav.main-nav a.active::after{width:100%;}
+nav.main-nav a.active{color:var(--white);}
+.header-right{display:flex; align-items:center; gap:18px;}
+.lang-switch{position:relative;}
+.lang-switch-trigger{display:flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:12px; font-weight:700; letter-spacing:0.04em; padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.08); color:var(--white); cursor:pointer; transition:background .2s ease, border-color .2s ease;}
+.lang-switch-trigger:hover{background:rgba(255,255,255,0.16); border-color:rgba(255,255,255,0.3);}
+.lang-switch-trigger svg{transition:transform .2s ease; flex-shrink:0;}
+.lang-switch.open .lang-switch-trigger svg{transform:rotate(180deg);}
+.lang-switch-menu{position:absolute; top:calc(100% + 8px); right:0; min-width:96px; background:var(--navy-900); border:1px solid rgba(255,255,255,0.15); border-radius:14px; padding:6px; display:flex; flex-direction:column; gap:2px; box-shadow:0 16px 32px rgba(0,0,0,0.35); opacity:0; visibility:hidden; transform:translateY(-6px); transition:opacity .18s ease, transform .18s ease, visibility .18s ease; z-index:50;}
+.lang-switch.open .lang-switch-menu{opacity:1; visibility:visible; transform:translateY(0);}
+.lang-switch-menu button{font-family:var(--font-mono); font-size:12px; font-weight:700; letter-spacing:0.04em; padding:8px 12px; border-radius:9px; border:none; background:transparent; color:var(--powder-200); cursor:pointer; text-align:left; transition:background .2s ease, color .2s ease;}
+.lang-switch-menu button.active{background:var(--gold-500); color:var(--navy-950);}
+.lang-switch-menu button:hover:not(.active){background:rgba(255,255,255,0.1); color:var(--white);}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; font-family:var(--font-body); font-weight:700; font-size:14.5px; padding:12px 22px; border-radius:999px; text-decoration:none; cursor:pointer; border:2px solid transparent; transition:transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease; white-space:nowrap;}
+.btn:hover{transform:translateY(-2px);}
+.btn-gold{background:var(--gold-500); color:var(--navy-950); box-shadow:0 8px 24px rgba(242,183,5,0.25);}
+.btn-gold:hover{background:var(--gold-600); box-shadow:0 10px 28px rgba(242,183,5,0.35);}
+.btn-ghost-dark{border-color:rgba(255,255,255,0.35); color:var(--white);}
+.btn-ghost-dark:hover{border-color:var(--white); background:rgba(255,255,255,0.08);}
+.header-cta{display:flex; align-items:center; gap:10px;}
+.burger{display:none; background:none; border:none; cursor:pointer; padding:6px; color:var(--white);}
+.mobile-nav{position:fixed; inset:0; background:var(--navy-950); z-index:200; display:flex; flex-direction:column; padding:100px 32px 40px; transform:translateX(100%); transition:transform .35s ease; visibility:hidden;}
+.mobile-nav.open{transform:translateX(0); visibility:visible;}
+.mobile-nav a{color:var(--white); font-family:var(--font-display); font-size:28px; font-weight:700; text-decoration:none; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.1);}
+.mobile-nav a.active{color:var(--gold-500);}
+.mobile-nav .close-btn{position:absolute; top:26px; right:28px; background:none; border:none; color:var(--white); cursor:pointer;}
+.mobile-nav .btn{margin-top:30px; color:var(--navy-950); font-family:var(--font-body); font-size:16px; border-bottom:none;}
+
+/* ============ HERO ============ */
+.ref-hero{position:relative; min-height:82vh; display:flex; align-items:flex-end; background:var(--navy-950); overflow:hidden; padding:150px 0 70px;}
+.ref-hero-bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 40%; transform:scale(1.06); animation:heroZoom 2.4s cubic-bezier(.16,.8,.3,1) forwards;}
+@keyframes heroZoom{to{transform:scale(1);}}
+.ref-hero-scrim{position:absolute; inset:0; background:linear-gradient(90deg, rgba(4,15,28,0.88) 0%, rgba(4,15,28,0.62) 45%, rgba(4,15,28,0.15) 100%), linear-gradient(180deg, rgba(4,15,28,0.55) 0%, rgba(4,15,28,0) 35%, rgba(4,15,28,0.65) 100%);}
+.ref-hero .container{position:relative; z-index:2; width:100%;}
+.crumbs{font-family:var(--font-mono); font-size:12px; letter-spacing:.08em; color:var(--powder-200); margin-bottom:26px;}
+.crumbs a{color:var(--powder-200); text-decoration:none;}
+.crumbs a:hover{color:var(--gold-500);}
+.crumbs span{margin:0 8px; opacity:.5;}
+.ref-hero .eyebrow{margin-bottom:18px;}
+.ref-hero h1{font-size:clamp(52px, 9vw, 112px); font-weight:900; color:var(--white); line-height:.92; margin:0 0 24px; opacity:0; animation:fadeUp .9s .15s ease forwards;}
+.ref-hero-lead{font-size:18px; color:var(--powder-200); max-width:680px; margin:0 0 34px; opacity:0; animation:fadeUp .9s .3s ease forwards;}
+.ref-hero-actions{display:flex; gap:16px; flex-wrap:wrap; opacity:0; animation:fadeUp .9s .45s ease forwards;}
+@keyframes fadeUp{from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);}}
+
+/* ============ SECTIONS ============ */
+.section{padding:110px 0;}
+.section-light{background:var(--white);}
+.section-mist{background:var(--mist-50);}
+.section-dark{background:var(--navy-950); color:var(--powder-200);}
+.section-head{max-width:760px; margin-bottom:56px;}
+.section-head h2{font-size:clamp(30px,4vw,46px); font-weight:800; margin:14px 0 16px; color:var(--navy-950); text-transform:uppercase;}
+.section-dark .section-head h2{color:var(--white);}
+.section-head p{font-size:17.5px; color:var(--ink-500); margin:0;}
+.section-dark .section-head p{color:var(--powder-200);}
+.section-head.centered{margin-left:auto; margin-right:auto; text-align:center;}
+
+/* references intro */
+.refs-intro{padding:110px 0 30px;}
+
+/* reference block */
+/* type filters */
+.ref-filters{display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:34px;}
+.ref-filters-label{font-family:var(--font-mono); font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-500); margin-right:6px;}
+.ref-filter{display:inline-flex; align-items:center; gap:10px; font-family:var(--font-body); font-weight:700; font-size:14.5px; padding:10px 18px; border-radius:999px; border:2px solid var(--mist-100); background:var(--white); color:var(--navy-900); cursor:pointer; transition:background .2s ease, border-color .2s ease, color .2s ease;}
+.ref-filter:hover{border-color:var(--navy-900);}
+.ref-filter.active{background:var(--navy-950); border-color:var(--navy-950); color:var(--white);}
+.ref-filter .count{font-family:var(--font-mono); font-size:12px; min-width:24px; padding:2px 7px; border-radius:999px; background:var(--mist-50); color:var(--ink-500); text-align:center;}
+.ref-filter.active .count{background:var(--gold-500); color:var(--navy-950);}
+.ref-empty{padding:40px 0 90px;}
+.ref-empty-box{border:2px dashed var(--mist-100); border-radius:18px; padding:46px 32px; text-align:center;}
+.ref-empty-box p{font-size:17.5px; color:var(--ink-500); max-width:560px; margin:0 auto 22px;}
+[hidden]{display:none !important;}
+
+.ref{padding:80px 0;}
+.ref.flip{background:var(--mist-50);}
+.ref-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:64px; align-items:start;}
+.ref.flip .ref-copy{order:2;}
+.ref-tag{font-family:var(--font-mono); font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-600); display:inline-flex; align-items:center; gap:10px; margin-bottom:12px;}
+.ref-tag::before{content:""; width:22px; height:2px; background:var(--gold-500);}
+.ref-copy h2{font-size:clamp(30px,3.6vw,44px); font-weight:800; color:var(--navy-950); text-transform:uppercase; line-height:1; margin:0 0 22px;}
+.ref-copy h3{font-size:clamp(21px,2.2vw,26px); font-weight:800; color:var(--navy-950); margin:30px 0 12px;}
+.ref-copy p{margin:0 0 16px; font-size:16.5px;}
+.ref-copy .ref-sub + .ref-sub{margin-top:44px; padding-top:40px; border-top:1px solid var(--mist-100);}
+.ref-quote{margin:24px 0 8px; padding:4px 0 4px 22px; border-left:3px solid var(--gold-500); font-family:var(--font-body); font-style:italic; font-weight:500; font-size:17.5px; color:var(--navy-900);}
+.ref-list{list-style:none; padding:0; margin:6px 0 0; display:grid; gap:10px;}
+.ref-list li{position:relative; padding-left:32px; font-weight:600; color:var(--navy-900);}
+.ref-list li::before{content:""; position:absolute; left:0; top:3px; width:20px; height:20px; border-radius:50%; background:var(--gold-500) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23081F38' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat;}
+.ref-gallery{display:grid; grid-template-columns:1fr 1fr; gap:14px; position:sticky; top:110px;}
+.ref-gallery button{display:block; padding:0; border:0; background:var(--mist-100); border-radius:14px; overflow:hidden; cursor:zoom-in; position:relative;}
+.ref-gallery button img{width:100%; height:100%; object-fit:cover; transition:transform .6s ease;}
+.ref-gallery button:hover img{transform:scale(1.04);}
+.ref-gallery .g-main{grid-column:1 / -1; box-shadow:0 24px 50px rgba(8,31,56,0.16);}
+.ref-gallery .g-main img{height:auto; max-height:560px;}
+.ref-gallery .g-thumb{aspect-ratio:3/2;}
+
+/* video */
+.video-card{position:relative; display:block; width:100%; aspect-ratio:16/9; border:0; padding:0; border-radius:16px; overflow:hidden; background:#000; cursor:pointer; box-shadow:0 24px 50px rgba(8,31,56,0.2);}
+.video-card img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s ease, opacity .3s ease;}
+.video-card:hover img{transform:scale(1.03); opacity:.85;}
+.video-card .play{position:absolute; left:50%; top:50%; width:72px; height:72px; margin:-36px 0 0 -36px; border-radius:50%; background:var(--gold-500); display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 10px rgba(242,183,5,0.25); transition:transform .25s ease;}
+.video-card:hover .play{transform:scale(1.08);}
+.video-card iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
+.ref-video{margin-top:56px;}
+.ref-video h3{font-size:clamp(22px,2.6vw,30px); font-weight:800; color:var(--navy-950); margin:0 0 20px; text-transform:uppercase;}
+
+/* CTA band */
+.cta-band{background:var(--navy-900); padding:70px 0; position:relative; overflow:hidden;}
+.cta-band::before{content:""; position:absolute; right:-120px; top:-120px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(242,183,5,0.22), rgba(242,183,5,0) 70%);}
+.cta-inner{position:relative; display:flex; align-items:center; justify-content:space-between; gap:40px;}
+.cta-inner h2{color:var(--white); font-size:clamp(26px,3.2vw,38px); font-weight:800; text-transform:uppercase; margin:0 0 10px;}
+.cta-inner p{color:var(--powder-200); margin:0; max-width:640px; font-size:16.5px;}
+
+/* light shows */
+.shows-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+.show h3{color:var(--white); font-size:20px; font-weight:800; margin:16px 0 0;}
+
+/* partners */
+.partners-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin-bottom:48px;}
+.partner-card{background:var(--white); border:1px solid var(--mist-100); border-radius:12px; aspect-ratio:3/2; display:flex; align-items:center; justify-content:center; padding:22px; box-shadow:0 6px 16px rgba(8,31,56,0.05); transition:transform .25s ease, box-shadow .25s ease;}
+.partner-card:hover{transform:translateY(-4px); box-shadow:0 14px 28px rgba(8,31,56,0.12);}
+.partner-card img{width:100%; height:100%; object-fit:contain;}
+.partners-text{display:grid; grid-template-columns:repeat(3,1fr); gap:32px;}
+.partners-text p{margin:0; font-size:16px;}
+
+/* footer */
+footer{background:var(--navy-950); padding:34px 0; border-top:1px solid rgba(255,255,255,0.08);}
+footer .container{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;}
+footer .brand img{height:26px; opacity:0.9;}
+footer p{color:var(--steel-400); font-size:13px; margin:0; font-family:var(--font-mono);}
+
+/* lightbox */
+.lightbox{position:fixed; inset:0; z-index:300; background:rgba(4,12,24,0.94); display:flex; align-items:center; justify-content:center; padding:60px 70px; opacity:0; visibility:hidden; transition:opacity .25s ease, visibility .25s ease;}
+.lightbox.open{opacity:1; visibility:visible;}
+.lightbox img{max-width:100%; max-height:100%; object-fit:contain; border-radius:8px; box-shadow:0 30px 80px rgba(0,0,0,0.5);}
+.lightbox button{position:absolute; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:var(--white); width:48px; height:48px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center;}
+.lightbox button:hover{background:rgba(255,255,255,0.18);}
+.lb-close{top:18px; right:18px;}
+.lb-prev{left:14px; top:50%; margin-top:-24px;}
+.lb-next{right:14px; top:50%; margin-top:-24px;}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  nav.main-nav{display:none;}
+  .burger{display:inline-flex;}
+  .header-cta .btn span.btn-text-long{display:none;}
+  .section{padding:80px 0;}
+  .refs-intro{padding:80px 0 10px;}
+  .ref{padding:64px 0;}
+  .ref-grid{grid-template-columns:1fr; gap:36px;}
+  .ref-gallery{position:static; order:-1;}
+  .ref.flip .ref-copy{order:0;}
+  .shows-grid{grid-template-columns:1fr 1fr;}
+  .partners-grid{grid-template-columns:repeat(3,1fr);}
+  .partners-text{grid-template-columns:1fr; gap:16px;}
+  .cta-inner{flex-direction:column; align-items:flex-start; gap:24px;}
+}
+@media (max-width:620px){
+  .container{padding:0 18px;}
+  header .container{gap:10px;}
+  .brand img{height:60px;}
+  header.scrolled .brand img{height:52px;}
+  .header-cta .btn{padding:10px 16px; font-size:13.5px;}
+  .lang-switch-trigger{padding:6px 10px;}
+  .ref-hero{min-height:88vh; padding:130px 0 54px;}
+  .ref-hero-lead{font-size:16.5px;}
+  .ref-hero-scrim{background:linear-gradient(180deg, rgba(4,15,28,0.6) 0%, rgba(4,15,28,0.45) 40%, rgba(4,15,28,0.92) 100%);}
+  .shows-grid{grid-template-columns:1fr;}
+  .partners-grid{grid-template-columns:repeat(2,1fr); gap:10px;}
+  .ref-gallery{gap:10px;}
+  .lightbox{padding:60px 12px;}
+  .lb-prev, .lb-next{top:auto; bottom:14px; margin-top:0;}
+  .lb-prev{left:calc(50% - 58px);} .lb-next{right:calc(50% - 58px);}
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWTGJNN2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/logo.webp" alt="The Stadium Experience"></a>
+    <nav class="main-nav">
+      <a href="index.html#deliver" data-i18n="nav_deliver">What we deliver</a>
+      <a href="index.html#benefits" data-i18n="nav_benefits">Benefits</a>
+      <a href="references.html" class="active" aria-current="page" data-i18n="nav_trusted">References</a>
+      <a href="index.html#journey" data-i18n="nav_journey">Journey</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="header-right">
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-switch-trigger" id="langSwitchTrigger" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langSwitchLabel">EN</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang-switch-menu" id="langSwitchMenu" role="listbox" aria-label="Language">
+          <button data-lang="en" class="active" role="option">EN</button>
+          <button data-lang="nl" role="option">NL</button>
+          <button data-lang="fr" role="option">FR</button>
+          <button data-lang="de" role="option">DE</button>
+        </div>
+      </div>
+      <div class="header-cta">
+        <a href="index.html#contact" class="btn btn-gold"><span class="btn-text-long" data-i18n="nav_cta">Plan a demo</span><span class="btn-text-short">→</span></a>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="Menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <button class="close-btn" id="closeMobileNav" aria-label="Close">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a href="index.html#deliver" data-i18n="nav_deliver">What we deliver</a>
+  <a href="index.html#benefits" data-i18n="nav_benefits">Benefits</a>
+  <a href="references.html" class="active" aria-current="page" data-i18n="nav_trusted">References</a>
+  <a href="index.html#journey" data-i18n="nav_journey">Journey</a>
+  <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+  <a href="index.html#contact" class="btn btn-gold" data-i18n="nav_cta">Plan a demo</a>
+</div>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="ref-hero">
+  <img class="ref-hero-bg" src="assets/references/hero.webp" alt="" fetchpriority="high">
+  <div class="ref-hero-scrim"></div>
+  <div class="container">
+    <div class="crumbs"><a href="index.html" data-i18n="crumb_home">Home</a><span>/</span><span data-i18n="nav_trusted" style="margin:0;opacity:1">References</span></div>
+    <span class="eyebrow on-dark" data-i18n="hero_eyebrow">References</span>
+    <h1 data-i18n="hero_title">STADIUMS</h1>
+    <p class="ref-hero-lead" data-i18n="hero_lead">LED stadium lighting delivers powerful, energy-efficient illumination that meets the demanding requirements of professional sporting events. With uniform light distribution and reduced glare, it creates an optimal experience for players, spectators and broadcasters alike. We provide tailor-made stadium lighting solutions, including expert advice, lighting design and full installation support. As an added benefit, the improved lighting quality enhances television broadcasts, making the pitch look even better on screen.</p>
+    <div class="ref-hero-actions">
+      <a href="#references" class="btn btn-ghost-dark" data-i18n="hero_more">View references</a>
+      <a href="index.html#contact" class="btn btn-gold" data-i18n="hero_quote">Get a quotation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REFERENCES INTRO ============ -->
+<section class="refs-intro section-light" id="references">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:0">
+      <span class="eyebrow" data-i18n="refs_eyebrow">Projects</span>
+      <h2 data-i18n="refs_title">References</h2>
+      <p data-i18n="refs_intro">We are proud of our references. From beautiful stadiums to training complexes for professional clubs. We have guided these clubs from A to Z. It starts with a good lighting design in line with the various standards. We then prepare a quotation and clearly show the savings. And of course, we then deliver what we promise at the start: a sustainable lighting installation that players, spectators and people watching from the sofa at home can enjoy.</p>
+    </div>
+    <!-- Filters: give each .ref (and in-list CTA) a data-type: lighting, boarding and/or screens, separated by spaces -->
+    <div class="ref-filters reveal" role="group" aria-labelledby="refFiltersLabel">
+      <span class="ref-filters-label" id="refFiltersLabel" data-i18n="filter_label">Filter by type</span>
+      <button class="ref-filter active" data-filter="all" aria-pressed="true"><span data-i18n="filter_all">All</span><span class="count"></span></button>
+      <button class="ref-filter" data-filter="lighting" aria-pressed="false"><span data-i18n="type_lighting">Sports lighting</span><span class="count"></span></button>
+      <button class="ref-filter" data-filter="boarding" aria-pressed="false"><span data-i18n="type_boarding">LED boarding</span><span class="count"></span></button>
+      <button class="ref-filter" data-filter="screens" aria-pressed="false"><span data-i18n="type_screens">LED screens</span><span class="count"></span></button>
+    </div>
+  </div>
+</section>
+
+<div class="refs">
+<!-- BORUSSIA-PARK -->
+<section class="ref" data-type="lighting" id="borussia-park">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_de">Germany</span>
+        <h2>Borussia-Park</h2>
+        <p data-i18n="bmg_p1">In the summer of 2025, we completed the full LED lighting upgrade of Borussia Mönchengladbach’s stadium and nine-pitch training complex. The stadium now features UEFA Level A ELITE LED floodlighting (&gt;2,000 lux), 128 dynamic RGB luminaires and a DMX entertainment lighting system, delivering world-class lighting quality and spectacular matchday experiences.</p>
+        <h3 data-i18n="bmg_h1">DMX entertainment system and light show</h3>
+        <p data-i18n="bmg_p2">The project was completed just in time for Borussia Mönchengladbach’s 125th anniversary. To celebrate the occasion, we designed and programmed a spectacular post-match light show following the game against Valencia CF, creating an unforgettable visual experience for thousands of supporters.</p>
+        <h3 data-i18n="bmg_scope">Our scope of work</h3>
+        <ul class="ref-list">
+          <li data-i18n="bmg_s1">Lighting design and infrastructure design</li>
+          <li data-i18n="bmg_s2">Installation of power supply and DMX control cabling</li>
+          <li data-i18n="bmg_s3">Installation of LED stadium lighting and RGB lighting</li>
+          <li data-i18n="bmg_s4">Lighting measurements for Bundesliga and UEFA</li>
+          <li data-i18n="bmg_s5">Programming of lighting scenes and light shows</li>
+          <li data-i18n="bmg_s6">Installation of LED floodlighting for 10 training pitches</li>
+        </ul>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/bmg-1.webp" alt="Borussia-Park, Mönchengladbach" width="1600" height="1200" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/bmg-2.webp" alt="Borussia-Park, Mönchengladbach" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/bmg-3.webp" alt="Borussia-Park, Mönchengladbach" loading="lazy"></button>
+      </div>
+    </div>
+    <div class="ref-video reveal">
+      <h3 data-i18n="bmg_video">From installation to light show: see what we created at Borussia-Park</h3>
+      <button class="video-card" data-yt="a6YR5M4Rdug" data-title="Borussia-Park"><img src="assets/references/video-bmg-build.webp" alt="" loading="lazy"><span class="play"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#081F38"/></svg></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band" data-type="lighting">
+  <div class="container cta-inner reveal">
+    <div>
+      <h2 data-i18n="cta_title">Switching to LED lighting for stadiums</h2>
+      <p data-i18n="cta_text">Convinced of the benefits of LED lighting for stadiums and would you like to discuss the possibilities? Contact us without obligation for more information or to schedule an assessment directly.</p>
+    </div>
+    <a href="index.html#contact" class="btn btn-gold" data-i18n="cta_btn">Contact us</a>
+  </div>
+</div>
+
+<!-- ADO DEN HAAG -->
+<section class="ref flip" data-type="lighting" id="ado-den-haag">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+        <h2>ADO Den Haag</h2>
+        <p data-i18n="ado_p1">ADO Den Haag has taken an important step towards a more sustainable future by upgrading its stadium with energy-efficient LED floodlighting. The new installation features 72 high-performance LED luminaires, delivering excellent light quality while significantly reducing energy consumption.</p>
+        <p data-i18n="ado_p2">The advanced digital lighting control system allows the club to easily switch between different lighting scenarios, including training mode, KNVB and UEFA match lighting, ensuring the right illumination for every occasion.</p>
+        <p data-i18n="ado_p3">To enhance the matchday experience, we also designed and programmed a spectacular pre-match light show. Combined with the flexible lighting system, it creates an unforgettable atmosphere for supporters while meeting the highest standards for professional football.</p>
+        <h3 data-i18n="ado_ben">The benefits for this club</h3>
+        <ul class="ref-list">
+          <li data-i18n="ado_b1">Save on maintenance costs</li>
+          <li data-i18n="ado_b2">Save on energy</li>
+          <li data-i18n="ado_b3">Longer lifespan</li>
+          <li data-i18n="ado_b4">Daylight approximation</li>
+          <li data-i18n="ado_b5">Dimmable and light shows</li>
+          <li data-i18n="ado_b6">Control system</li>
+          <li data-i18n="ado_b7">Meets local sports association and UEFA requirements</li>
+        </ul>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/ado-1.webp" alt="ADO Den Haag" width="1600" height="900" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/ado-2.webp" alt="ADO Den Haag" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/ado-3.webp" alt="ADO Den Haag" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GO AHEAD EAGLES -->
+<section class="ref" data-type="lighting" id="go-ahead-eagles">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+        <h2>Go Ahead Eagles</h2>
+        <p data-i18n="gae_p1">Go Ahead Eagles unexpectedly qualified for the play-offs for European football, and after their win against FC Utrecht, European football was on the agenda at De Adelaarshorst. The stadium had to be upgraded quickly: the pitch was replaced, safe standing sections were installed, and new stadium lighting was added in accordance with UEFA standards.</p>
+        <p data-i18n="gae_p2">The club chose to partner with us. Important factors such as light intensity, uniformity and spill light were taken into account, together with a plan to limit light nuisance for the surrounding residential area. As a result, the impact on the neighbourhood is five times smaller, despite almost twice as much light in the stadium.</p>
+        <h3 data-i18n="gae_h1">130 LED luminaires and 2,000 lux illuminate De Adelaarshorst</h3>
+        <p data-i18n="gae_p3">In just a week and a half, 130 LED luminaires were installed, just in time for the European home match against SK Brann. The pitch is now illuminated with 2,000 lux, and a lighting management system provides dimming options during Eredivisie matches and other events. The result is something to be proud of!</p>
+        <p class="ref-quote" data-i18n="gae_quote">“It simply feels like home,” says our project manager Steven Smals.</p>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/gae-1.webp" alt="Go Ahead Eagles, De Adelaarshorst" width="1333" height="1540" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/gae-2.webp" alt="Go Ahead Eagles, De Adelaarshorst" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/gae-3.webp" alt="Go Ahead Eagles, De Adelaarshorst" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FC UTRECHT -->
+<section class="ref flip" data-type="lighting" id="fc-utrecht">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+        <h2>FC Utrecht</h2>
+        <p data-i18n="fcu_p1">Since July 2023, Stadion Galgenwaard has also been equipped with sustainable LED lighting. By switching from gas-discharge lighting to LED lighting, FC Utrecht achieves a 55% saving on its energy bill. Thanks to the installation of this sustainable LED lighting, Stadion Galgenwaard now also meets the UEFA Level B standard (&gt; 1,400 lux).</p>
+        <p data-i18n="fcu_p2">In total, this project involved the installation of 120 sustainable LED luminaires and the removal of 192 conventional stadium lamps. For this project, we also upgraded the infrastructure, including the installation of kilometres of fibre-optic cables. These cables are required for the installation of the DMX entertainment system. This system is used to control the lighting for spectacular effects. As a result, players and spectators can now enjoy an impressive light show.</p>
+        <h3 data-i18n="fcu_h1">Innovative and sustainable</h3>
+        <p class="ref-quote" data-i18n="fcu_quote">“In addition to the fact that this innovative LED lighting contributes to lower energy consumption, replacing the lighting also provides much better visibility for both spectators and players,” says FC Utrecht’s Operational &amp; Financial Director Edo Keuning.</p>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/fcu-1.webp" alt="FC Utrecht, Stadion Galgenwaard" width="1280" height="960" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/fcu-2.webp" alt="FC Utrecht, Stadion Galgenwaard" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/fcu-3.webp" alt="FC Utrecht, Stadion Galgenwaard" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GELREDOME -->
+<section class="ref" data-type="lighting" id="gelredome">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+        <h2 data-i18n="gd_title">GelreDome Stadium</h2>
+        <p data-i18n="gd_p1">As the largest theatre in the Netherlands, GelreDome hosts an impressive mix of top-level football matches, concerts and large-scale events. To support its demanding schedule, the stadium has recently undergone a complete upgrade of its lighting system.</p>
+        <p data-i18n="gd_p2">Our team replaced the existing stadium lighting with a new, sustainable LED solution, delivering higher performance, greater energy efficiency and enhanced flexibility for both sports and entertainment events. The project was executed under a tight timeline, with preparations taking place alongside rehearsals for various artists and the possibility of a play-off match for football club Vitesse Arnhem.</p>
+        <h3 data-i18n="h_solution">The solution</h3>
+        <p data-i18n="gd_p3">In addition to the new LED floodlighting, the stadium is equipped with a DMX entertainment lighting system, enabling spectacular light shows and dynamic effects during concerts and events. The first visitors to experience the new lighting were not football fans, but the audience of Suzan &amp; Freek. The popular Dutch duo performed ten concerts in a row at GelreDome, welcoming a total of 400,000 visitors.</p>
+        <p data-i18n="gd_p4">The new lighting system combines atmosphere, experience and safety. With close to 1,000 lux on the playing surface, it meets the requirements for professional football while also creating the perfect setting for world-class entertainment.</p>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/gelredome-1.webp" alt="GelreDome, Arnhem" width="1600" height="1200" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/gelredome-2.webp" alt="GelreDome, Arnhem" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/gelredome-3.webp" alt="GelreDome, Arnhem" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STADION AM ZOO -->
+<section class="ref flip" data-type="lighting" id="stadion-am-zoo">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_de">Germany</span>
+        <h2>Stadion am Zoo</h2>
+        <p data-i18n="wsv_p1">Wuppertaler SV has upgraded its stadium with a new, energy-efficient LED lighting system, enhancing both performance and sustainability. The stadium is home to some of Europe’s most unique floodlight towers: four tiltable masts that are now equipped with 124 high-performance LED luminaires.</p>
+        <p data-i18n="wsv_p2">The new installation delivers excellent light quality while significantly reducing energy consumption. With this upgrade, the stadium meets the lighting requirements for both the Bundesliga and UEFA Level B competitions.</p>
+        <h3 data-i18n="wsv_h1">RGB and DMX</h3>
+        <p data-i18n="wsv_p3">To further enhance the matchday experience, we also installed RGB architectural lighting on the grandstand roof, fully controlled by a DMX system. This allows the club to create dynamic lighting effects for matches and events, combining professional sports lighting with an engaging atmosphere.</p>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/wuppertal-1.webp" alt="Stadion am Zoo, Wuppertal" width="1600" height="900" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/wuppertal-2.webp" alt="Stadion am Zoo, Wuppertal" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/wuppertal-3.webp" alt="Stadion am Zoo, Wuppertal" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÖVB-ARENA -->
+<section class="ref" data-type="lighting" id="ovb-arena">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_de">Germany</span>
+        <h2>ÖVB-Arena Bremen</h2>
+        <p data-i18n="ovb_p1">The ÖVB-Arena in Bremen has been upgraded with a modern LED lighting system, transforming one of Northern Germany’s most versatile event venues into a future-ready arena for sports and entertainment.</p>
+        <h3 data-i18n="h_solution">The solution</h3>
+        <p data-i18n="ovb_p2">The installation features more than 100 LED floodlights and over 200 RGB luminaires, providing exceptional flexibility for Bundesliga sports, concerts and live productions. The system delivers high-quality TV lighting, dynamic light shows and intelligent DMX control for a wide range of events.</p>
+        <p data-i18n="ovb_p3">The LED floodlighting system has also received official FIBA approval, meeting the highest international standards for professional basketball arenas.</p>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/ovb-1.webp" alt="ÖVB-Arena, Bremen" width="1600" height="1066" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/ovb-2.webp" alt="ÖVB-Arena, Bremen" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/ovb-3.webp" alt="ÖVB-Arena, Bremen" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FC DORDRECHT + TOP OSS -->
+<section class="ref flip" data-type="lighting" id="fc-dordrecht">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <div class="ref-sub">
+          <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+          <h2>FC Dordrecht</h2>
+          <p data-i18n="dor_p1">In 2019, we equipped FC Dordrecht’s stadium with sustainable LED lighting. We replaced the 80 gas-discharge lamps with 64 LED luminaires, achieving an energy saving of 50%. We equipped the lighting with a digital lighting management system. This allows the lighting to be switched to any required level. We also programmed several light shows, taking fan engagement to the next level.</p>
+        </div>
+        <div class="ref-sub" id="top-oss">
+          <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+          <h2>TOP Oss</h2>
+          <p data-i18n="oss_p1">When TOP Oss had to play at FC Dordrecht at the end of 2019, the TOP Oss management was positively surprised by the new LED lighting. After a tender process, TOP Oss chose our quality and service, and at the beginning of 2020 we also equipped the stadium in Oss with LED lighting, enabling the club to comfortably meet the KNVB licence requirement (&gt; 800 lux).</p>
+        </div>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/dordrecht-1.webp" alt="FC Dordrecht" width="1280" height="853" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/toposs-1.webp" alt="TOP Oss" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/toposs-2.webp" alt="TOP Oss" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TELSTAR -->
+<section class="ref" data-type="lighting" id="telstar">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+        <h2>Telstar 1963</h2>
+        <p data-i18n="tel_p1">Telstar 1963 NV had been looking for a suitable partner to make the club’s lighting more sustainable for some time, but at the end of March 2021 the ball really started rolling. For Telstar 1963 NV and for us, it is a great case that shows a strong portfolio is worth its weight in gold. Telstar, nicknamed the White Lions, has been actively working on sustainability for several years. The club has established its own foundation, Stichting The Green Lions, led by Michael van Praag and Steef Hammerstein, with the ambition of making the stadium completely energy-neutral.</p>
+        <h3 data-i18n="h_solution">The solution</h3>
+        <p data-i18n="tel_p2">After an orientation phase to find the right installer for the new lighting, three parties remained. Hammerstein: ‘At that point, you no longer look only at the lamps; you look for a party that fits Telstar’s DNA. Telstar is a special club: an outsider, but also distinctive and accessible. We were looking for a partner that would match that.’ That partner became us. At the end of May 2021, we started work at the stadium and replaced the 80 gas-discharge lamps with 56 LED luminaires.</p>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/telstar-1.webp" alt="Telstar 1963, Velsen-Zuid" width="1280" height="960" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/telstar-2.webp" alt="Telstar 1963" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/telstar-3.webp" alt="Telstar 1963" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEPTUNUS -->
+<section class="ref flip" data-type="lighting" id="neptunus">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+        <h2 data-i18n="nep_title">Baseball Stadium Neptunus Rotterdam</h2>
+        <p data-i18n="nep_p1">Baseball and softball club Neptunus Rotterdam has made its complex more sustainable and expanded it. In partnership with us, the first major step was taken with the installation of LED lighting. Not only the stadium, but also the surrounding pitches were upgraded with both new masts and LED lighting.</p>
+        <p data-i18n="nep_p2">In addition to high-quality light, the new LED installation also offers the option of lighting effects through the installed DMX system. The luminaires comply with the new regulations of the Royal Netherlands Baseball and Softball Federation. Partly as a result, international matches can be played in the stadium. In addition, a light-nuisance calculation was prepared in consultation with the Municipality of Rotterdam with regard to light nuisance for the surrounding area. In addition to the renewed installation in the stadium, the softball pitch has also been fitted with LED luminaires and a lighting management system. The second baseball field has been equipped with an LED installation at top-league level.</p>
+        <p data-i18n="nep_p3">The installation of the new system results in significant savings on the club’s energy bill. In addition, the club can now train more and more often, and play matches all year round under energy-efficient lighting.</p>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/neptunus-1.webp" alt="Neptunus Rotterdam" width="1280" height="854" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/neptunus-2.webp" alt="Neptunus Rotterdam" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/neptunus-3.webp" alt="Neptunus Rotterdam" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HERACLES -->
+<section class="ref" data-type="lighting" id="heracles-almelo">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+        <h2>Heracles Almelo</h2>
+        <p data-i18n="her_p1">We have signed a multi-year agreement with Heracles Almelo. Part of the partnership is the installation of sustainable lighting at the stadium. Following a sustainability study in and around the stadium, carried out by Heracles Almelo together with companies and educational institutions, replacing the lighting installation is the first step being taken.</p>
+        <h3 data-i18n="her_h1">Future-proof and sustainable</h3>
+        <p class="ref-quote" data-i18n="her_quote">Rob Toussaint, general director of Heracles Almelo: “Installing sustainable lamps in our stadium contributes to the future-proofing of the club. With the new lighting, Heracles Almelo meets the highest requirements of the UEFA licence and we are ready for the future. In addition, this makes Heracles Almelo one of the first Eredivisie clubs with LED lighting suitable for European matches.”</p>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/heracles-1.webp" alt="Heracles Almelo, Erve Asito" width="1280" height="960" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/heracles-2.webp" alt="Heracles Almelo, Erve Asito" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/heracles-3.webp" alt="Heracles Almelo, Erve Asito" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GO AHEAD EAGLES TRAINING PITCHES -->
+<section class="ref flip" data-type="lighting" id="go-ahead-eagles-training">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+        <h2 data-i18n="gtr_title">Go Ahead Eagles training pitches</h2>
+        <p data-i18n="gtr_p1">Since 2019, Go Ahead Eagles has had its training complex at Sportpark Zuiderlaan in Twello. The sports park consists of several pitches where both training sessions and matches can take place. There is also a multifunctional sports hall. The accommodation, which is shared with amateur club SV Twello, was equipped with sustainable LED lighting in 2019. A great partnership between Go Ahead Eagles, SV Twello, the Municipality of Deventer, the Municipality of Voorst and us.</p>
+        <p data-i18n="gtr_p2">In addition to installing the LED lighting, we also handled the entire grant process. The pitches can also be controlled via a digital lighting management system. This allows multiple lighting scenarios to be configured, and the sports park can be operated automatically using the scheduling function.</p>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/gae-training-1.webp" alt="Sportpark Zuiderlaan, Twello" width="1280" height="960" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FC TWENTE -->
+<section class="ref" data-type="lighting" id="fc-twente">
+  <div class="container">
+    <div class="ref-grid">
+      <div class="ref-copy reveal">
+        <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
+        <h2 data-i18n="twe_title">Partnership with FC Twente</h2>
+        <p data-i18n="twe_p1">We have joined forces with FC Twente in a three-year partnership. The goal: to help amateur clubs in the Twente region make their sports parks more sustainable. FC Twente was impressed by our way of working, and together we decided to explore the possibilities for a partnership.</p>
+        <p data-i18n="twe_p2">This resulted in a three-year partnership. FC Twente has a covenant with 164 amateur clubs, and this partnership fits in perfectly with that. FC Twente acts as a connector between the sports clubs and us. Together, we have drawn up a plan to reach the clubs. For example, mailings will be sent and FC Twente will use its social media channels. In addition, the Sportverlichting name will be visible on the LED boards in the stadium and we will act as a match sponsor. We will also jointly organise several information evenings around matches at the stadium.</p>
+      </div>
+      <div class="ref-gallery reveal">
+        <button class="g-main"><img src="assets/references/twente-1.webp" alt="FC Twente" width="1280" height="720" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/twente-2.webp" alt="FC Twente" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/twente-3.webp" alt="FC Twente" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- shown when a filter has no references yet -->
+<div class="ref-empty" id="refEmpty" hidden>
+  <div class="container">
+    <div class="ref-empty-box">
+      <p data-empty="boarding" data-i18n="empty_boarding">References for LED boarding are coming soon. Want to know what we can do for your stadium?</p>
+      <p data-empty="screens" data-i18n="empty_screens">References for LED screens are coming soon. Want to know what we can do for your stadium?</p>
+      <a href="index.html#contact" class="btn btn-gold" data-i18n="cta_btn">Contact us</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LIGHT SHOWS ============ -->
+<section class="section section-dark" id="light-shows">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <span class="eyebrow on-dark" data-i18n="shows_eyebrow">Light shows</span>
+      <h2 data-i18n="shows_title">Our custom-made light shows</h2>
+      <p data-i18n="shows_text">Take your stadium experience to the next level with an advanced lighting management system. We have equipped stadiums across Europe with entertainment lighting solutions that transform matches and events into unforgettable experiences. Whether controlled wirelessly or via DMX, our systems offer complete flexibility for creating spectacular light shows, matchday effects and event-specific lighting scenes. We tailor each solution to the stadium’s needs, ensuring seamless operation and maximum visual impact.</p>
+    </div>
+    <div class="shows-grid reveal-stagger">
+      <div class="show">
+        <button class="video-card" data-yt="jOzgjRSFWDw" data-title="Light show Borussia Mönchengladbach"><img src="assets/references/video-bmg-show.webp" alt="" loading="lazy"><span class="play"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#081F38"/></svg></span></button>
+        <h3 data-i18n="show_1">Light show Borussia Mönchengladbach</h3>
+      </div>
+      <div class="show">
+        <button class="video-card" data-yt="7CI6VudFa4c" data-title="Light show UEFA Women’s Nations League"><img src="assets/references/video-fcu.webp" alt="" loading="lazy"><span class="play"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#081F38"/></svg></span></button>
+        <h3 data-i18n="show_2">Light show UEFA Women’s Nations League</h3>
+      </div>
+      <div class="show">
+        <button class="video-card" data-yt="9Yl26PtTJvo" data-title="Light show ÖVB-Arena"><img src="assets/references/video-ovb.webp" alt="" loading="lazy"><span class="play"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#081F38"/></svg></span></button>
+        <h3 data-i18n="show_3">Light show basketball match ÖVB-Arena</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="container cta-inner reveal">
+    <div>
+      <h2 data-i18n="cta_title">Switching to LED lighting for stadiums</h2>
+      <p data-i18n="cta_text">Convinced of the benefits of LED lighting for stadiums and would you like to discuss the possibilities? Contact us without obligation for more information or to schedule an assessment directly.</p>
+    </div>
+    <a href="index.html#contact" class="btn btn-gold" data-i18n="cta_btn">Contact us</a>
+  </div>
+</div>
+
+<!-- ============ PARTNERS ============ -->
+<section class="section section-mist" id="partners">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="partners_eyebrow">Partners</span>
+      <h2 data-i18n="partners_title">Official partners</h2>
+    </div>
+    <div class="partners-grid reveal-stagger">
+      <div class="partner-card"><img src="assets/references/partner-thorn.webp" alt="Thorn Lighting" loading="lazy"></div>
+      <div class="partner-card"><img src="assets/references/partner-gigatera.webp" alt="Gigatera" loading="lazy"></div>
+      <div class="partner-card"><img src="assets/references/partner-philips.webp" alt="Philips" loading="lazy"></div>
+      <div class="partner-card"><img src="assets/references/partner-signify.webp" alt="Signify" loading="lazy"></div>
+      <div class="partner-card"><img src="assets/references/partner-aaa-lux.webp" alt="AAA-LUX" loading="lazy"></div>
+    </div>
+    <div class="partners-text reveal-stagger">
+      <p data-i18n="partners_p1">We provide independent, expert advice to ensure the best possible outcome for every project. That is why we collaborate with a carefully selected network of trusted lighting partners.</p>
+      <p data-i18n="partners_p2">Each of our partners has been chosen based on proven quality, innovation and long-term reliability, ensuring that every solution meets the highest standards of performance and durability.</p>
+      <p data-i18n="partners_p3">Through years of experience, we have learned that every project is unique. By working with multiple leading manufacturers and technology partners, we can select the products and solutions that best match your club’s requirements, delivering the most effective and future-proof lighting solution.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/logo.webp" alt="The Stadium Experience"></a>
+    <p data-i18n="footer_text">The Stadium Experience</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo">
+  <img id="lbImg" alt="">
+  <button class="lb-close" id="lbClose" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  <button class="lb-prev" id="lbPrev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <button class="lb-next" id="lbNext" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+
+<script src="assets/references-i18n-nl.js"></script>
+<script src="assets/references-i18n-fr.js"></script>
+<script src="assets/references-i18n-de.js"></script>
+<script>
+/* ============ TRANSLATIONS ============ */
+/* English is the text in the HTML itself; NL / FR / DE live in assets/references-i18n-*.js */
+const T = window.TSE_REF_I18N || {};
+T.en = {page_title: document.title};
+document.querySelectorAll('[data-i18n]').forEach(el => { T.en[el.dataset.i18n] = el.innerHTML; });
+const LANGS = ['en','nl','fr','de'];
+let currentLang = 'en';
+
+function applyLang(lang){
+  if(!LANGS.includes(lang) || !T[lang]) lang = 'en';
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  const t = T[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.dataset.i18n];
+    el.innerHTML = v !== undefined ? v : T.en[el.dataset.i18n];
+  });
+  document.title = t.page_title || T.en.page_title;
+  document.querySelectorAll('.lang-switch-menu button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  document.getElementById('langSwitchLabel').textContent = lang.toUpperCase();
+  try{ localStorage.setItem('tse_lang', lang); }catch(e){}
+}
+
+function initialLang(){
+  try{
+    const q = new URLSearchParams(location.search).get('lang');
+    if(q && LANGS.includes(q)) return q;
+    const s = localStorage.getItem('tse_lang');
+    if(s && LANGS.includes(s)) return s;
+  }catch(e){}
+  return 'en';
+}
+
+const langSwitch = document.getElementById('langSwitch');
+const langSwitchTrigger = document.getElementById('langSwitchTrigger');
+function closeLangSwitch(){ langSwitch.classList.remove('open'); langSwitchTrigger.setAttribute('aria-expanded','false'); }
+langSwitchTrigger.addEventListener('click', () => {
+  const willOpen = !langSwitch.classList.contains('open');
+  langSwitch.classList.toggle('open', willOpen);
+  langSwitchTrigger.setAttribute('aria-expanded', String(willOpen));
+});
+document.querySelectorAll('.lang-switch-menu button').forEach(btn => btn.addEventListener('click', () => { applyLang(btn.dataset.lang); closeLangSwitch(); }));
+document.addEventListener('click', e => { if(!langSwitch.contains(e.target)) closeLangSwitch(); });
+
+/* ============ HEADER / MOBILE NAV ============ */
+const header = document.getElementById('site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+const mobileNav = document.getElementById('mobileNav');
+document.getElementById('burgerBtn').addEventListener('click', () => mobileNav.classList.add('open'));
+document.getElementById('closeMobileNav').addEventListener('click', () => mobileNav.classList.remove('open'));
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+/* ============ SCROLL REVEAL ============ */
+const io = new IntersectionObserver(entries => entries.forEach(en => {
+  if(en.isIntersecting){ en.target.classList.add('is-visible'); io.unobserve(en.target); }
+}), {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+/* ============ TYPE FILTERS ============ */
+/* Each block in .refs has data-type: lighting, boarding and/or screens (several allowed, space separated).
+   ?type=lighting, ?type=boarding or ?type=screens in the URL opens the page on that filter. */
+const FILTERS = ['all', 'lighting', 'boarding', 'screens'];
+const refBlocks = [...document.querySelectorAll('.refs > [data-type]')];
+const refs = refBlocks.filter(el => el.classList.contains('ref'));
+const filterBtns = [...document.querySelectorAll('.ref-filter')];
+const hasType = (el, f) => f === 'all' || el.dataset.type.split(/\s+/).includes(f);
+filterBtns.forEach(b => { b.querySelector('.count').textContent = refs.filter(r => hasType(r, b.dataset.filter)).length; });
+function applyFilter(f, updateUrl){
+  if(!FILTERS.includes(f)) f = 'all';
+  refBlocks.forEach(el => { el.hidden = !hasType(el, f); });
+  // alternate image side and background over the visible blocks only
+  refs.filter(r => !r.hidden).forEach((r, i) => r.classList.toggle('flip', i % 2 === 1));
+  filterBtns.forEach(b => { const on = b.dataset.filter === f; b.classList.toggle('active', on); b.setAttribute('aria-pressed', String(on)); });
+  document.getElementById('refEmpty').hidden = refs.some(r => !r.hidden);
+  document.querySelectorAll('#refEmpty [data-empty]').forEach(p => { p.hidden = p.dataset.empty !== f; });
+  if(updateUrl){
+    try{ const u = new URL(location.href); if(f === 'all') u.searchParams.delete('type'); else u.searchParams.set('type', f); history.replaceState(null, '', u); }catch(e){}
+  }
+}
+filterBtns.forEach(b => b.addEventListener('click', () => applyFilter(b.dataset.filter, true)));
+applyFilter(new URLSearchParams(location.search).get('type') || 'all', false);
+
+/* ============ VIDEOS (YouTube loads only after a click) ============ */
+document.querySelectorAll('.video-card[data-yt]').forEach(card => card.addEventListener('click', () => {
+  if(card.querySelector('iframe')) return;
+  const f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + card.dataset.yt + '?autoplay=1&rel=0';
+  f.title = card.dataset.title || 'Video';
+  f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  f.allowFullscreen = true;
+  card.appendChild(f);
+  card.style.cursor = 'default';
+}));
+
+/* ============ LIGHTBOX ============ */
+const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg');
+let lbSet = [], lbIdx = 0, lbReturn = null;
+function lbShow(){ const im = lbSet[lbIdx]; lbImg.src = im.currentSrc || im.src; lbImg.alt = im.alt; const multi = lbSet.length > 1; document.getElementById('lbPrev').hidden = !multi; document.getElementById('lbNext').hidden = !multi; }
+function lbOpen(set, i, from){ lbSet = set; lbIdx = i; lbReturn = from; lbShow(); lb.classList.add('open'); document.getElementById('lbClose').focus(); }
+function lbClose(){ lb.classList.remove('open'); if(lbReturn) lbReturn.focus(); }
+function lbStep(d){ lbIdx = (lbIdx + d + lbSet.length) % lbSet.length; lbShow(); }
+document.querySelectorAll('.ref-gallery').forEach(g => {
+  const btns = [...g.querySelectorAll('button')], imgs = btns.map(b => b.querySelector('img'));
+  btns.forEach((b, i) => { b.setAttribute('aria-label', imgs[i].alt); b.addEventListener('click', () => lbOpen(imgs, i, b)); });
+});
+document.getElementById('lbClose').addEventListener('click', lbClose);
+document.getElementById('lbPrev').addEventListener('click', () => lbStep(-1));
+document.getElementById('lbNext').addEventListener('click', () => lbStep(1));
+lb.addEventListener('click', e => { if(e.target === lb) lbClose(); });
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){ closeLangSwitch(); if(lb.classList.contains('open')) lbClose(); }
+  if(!lb.classList.contains('open')) return;
+  if(e.key === 'ArrowLeft') lbStep(-1);
+  if(e.key === 'ArrowRight') lbStep(1);
+});
+
+applyLang(initialLang());
+</script>
+</body>
+</html>
