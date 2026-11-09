@@ -217,7 +217,12 @@ footer p{color:var(--steel-400); font-size:13px; margin:0; font-family:var(--fon
   .ref-gallery{position:static; order:-1;}
   .ref.flip .ref-copy{order:0;}
   .shows-grid{grid-template-columns:1fr 1fr;}
-  .partners-grid{grid-template-columns:repeat(3,1fr);}
+  .shows-grid > .show:last-child:nth-child(odd){grid-column:1 / -1;}
+  /* one image height for every block when the gallery sits above the text */
+  .ref-gallery .g-main img{aspect-ratio:4/3; height:auto; max-height:none; object-fit:cover;}
+  .section-head{margin-bottom:36px;}
+  .partners-grid{display:flex; flex-wrap:wrap; justify-content:center;}
+  .partner-card{flex:0 0 calc((100% - 32px) / 3);}
   .partners-text{grid-template-columns:1fr; gap:16px;}
   .cta-inner{flex-direction:column; align-items:flex-start; gap:24px;}
 }
@@ -229,14 +234,23 @@ footer p{color:var(--steel-400); font-size:13px; margin:0; font-family:var(--fon
   .header-cta .btn{padding:10px 16px; font-size:13.5px;}
   .lang-switch-trigger{padding:6px 10px;}
   .ref-hero{min-height:88vh; padding:130px 0 54px;}
-  .ref-hero-lead{font-size:16.5px;}
-  .ref-hero-scrim{background:linear-gradient(180deg, rgba(4,15,28,0.6) 0%, rgba(4,15,28,0.45) 40%, rgba(4,15,28,0.92) 100%);}
+  .ref-hero-lead{font-size:16px; text-shadow:0 1px 14px rgba(4,15,28,0.7);}
+  .ref-hero-scrim{background:linear-gradient(180deg, rgba(4,15,28,0.72) 0%, rgba(4,15,28,0.68) 45%, rgba(4,15,28,0.94) 100%);}
+  .ref-filters{gap:8px; margin-top:28px;}
+  .ref-filters-label{flex-basis:100%; margin:0 0 4px;}
+  .ref-filter{padding:9px 14px; font-size:14px;}
+  .section-head.centered{text-align:left;}
   .shows-grid{grid-template-columns:1fr;}
-  .partners-grid{grid-template-columns:repeat(2,1fr); gap:10px;}
+  .partners-grid{gap:10px;}
+  .partner-card{flex-basis:calc((100% - 10px) / 2); padding:16px;}
   .ref-gallery{gap:10px;}
   .lightbox{padding:60px 12px;}
   .lb-prev, .lb-next{top:auto; bottom:14px; margin-top:0;}
   .lb-prev{left:calc(50% - 58px);} .lb-next{right:calc(50% - 58px);}
+}
+@media (max-width:360px){
+  .ref-filter{padding:8px 12px; font-size:13.5px; gap:8px;}
+  .ref-filter .count{min-width:20px; padding:1px 6px;}
 }
 </style>
 </head>
@@ -611,25 +625,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
-<!-- FC TWENTE -->
-<section class="ref" data-type="lighting" id="fc-twente">
-  <div class="container">
-    <div class="ref-grid">
-      <div class="ref-copy reveal">
-        <span class="ref-tag" data-i18n="country_nl">The Netherlands</span>
-        <h2 data-i18n="twe_title">Partnership with FC Twente</h2>
-        <p data-i18n="twe_p1">We have joined forces with FC Twente in a three-year partnership. The goal: to help amateur clubs in the Twente region make their sports parks more sustainable. FC Twente was impressed by our way of working, and together we decided to explore the possibilities for a partnership.</p>
-        <p data-i18n="twe_p2">This resulted in a three-year partnership. FC Twente has a covenant with 164 amateur clubs, and this partnership fits in perfectly with that. FC Twente acts as a connector between the sports clubs and us. Together, we have drawn up a plan to reach the clubs. For example, mailings will be sent and FC Twente will use its social media channels. In addition, the Sportverlichting name will be visible on the LED boards in the stadium and we will act as a match sponsor. We will also jointly organise several information evenings around matches at the stadium.</p>
-      </div>
-      <div class="ref-gallery reveal">
-        <button class="g-main"><img src="assets/references/twente-1.webp" alt="FC Twente" width="1280" height="720" loading="lazy"></button>
-        <button class="g-thumb"><img src="assets/references/twente-2.webp" alt="FC Twente" loading="lazy"></button>
-        <button class="g-thumb"><img src="assets/references/twente-3.webp" alt="FC Twente" loading="lazy"></button>
-      </div>
-    </div>
-  </div>
-</section>
 </div>
 
 <!-- shown when a filter has no references yet -->
@@ -769,9 +764,12 @@ const header = document.getElementById('site-header');
 const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
 window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 const mobileNav = document.getElementById('mobileNav');
-document.getElementById('burgerBtn').addEventListener('click', () => mobileNav.classList.add('open'));
-document.getElementById('closeMobileNav').addEventListener('click', () => mobileNav.classList.remove('open'));
-mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+// keep the page behind an open menu or photo from scrolling
+const lockScroll = on => { document.documentElement.style.overflow = on ? 'hidden' : ''; };
+const closeNav = () => { mobileNav.classList.remove('open'); lockScroll(false); };
+document.getElementById('burgerBtn').addEventListener('click', () => { mobileNav.classList.add('open'); lockScroll(true); });
+document.getElementById('closeMobileNav').addEventListener('click', closeNav);
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
 
 /* ============ SCROLL REVEAL ============ */
 const io = new IntersectionObserver(entries => entries.forEach(en => {
@@ -819,8 +817,16 @@ document.querySelectorAll('.video-card[data-yt]').forEach(card => card.addEventL
 const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg');
 let lbSet = [], lbIdx = 0, lbReturn = null;
 function lbShow(){ const im = lbSet[lbIdx]; lbImg.src = im.currentSrc || im.src; lbImg.alt = im.alt; const multi = lbSet.length > 1; document.getElementById('lbPrev').hidden = !multi; document.getElementById('lbNext').hidden = !multi; }
-function lbOpen(set, i, from){ lbSet = set; lbIdx = i; lbReturn = from; lbShow(); lb.classList.add('open'); document.getElementById('lbClose').focus(); }
-function lbClose(){ lb.classList.remove('open'); if(lbReturn) lbReturn.focus(); }
+function lbOpen(set, i, from){ lbSet = set; lbIdx = i; lbReturn = from; lbShow(); lb.classList.add('open'); lockScroll(true); document.getElementById('lbClose').focus(); }
+function lbClose(){ lb.classList.remove('open'); lockScroll(false); if(lbReturn) lbReturn.focus({preventScroll:true}); }
+// swipe left / right between photos on touch screens
+let lbTouchX = null;
+lb.addEventListener('touchstart', e => { lbTouchX = e.touches[0].clientX; }, {passive:true});
+lb.addEventListener('touchend', e => {
+  if(lbTouchX === null) return;
+  const dx = e.changedTouches[0].clientX - lbTouchX; lbTouchX = null;
+  if(Math.abs(dx) > 50 && lbSet.length > 1) lbStep(dx < 0 ? 1 : -1);
+}, {passive:true});
 function lbStep(d){ lbIdx = (lbIdx + d + lbSet.length) % lbSet.length; lbShow(); }
 document.querySelectorAll('.ref-gallery').forEach(g => {
   const btns = [...g.querySelectorAll('button')], imgs = btns.map(b => b.querySelector('img'));
