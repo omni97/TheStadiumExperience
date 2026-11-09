@@ -148,6 +148,8 @@ nav.main-nav a.active{color:var(--white);}
 .ref-copy h3{font-size:clamp(21px,2.2vw,26px); font-weight:800; color:var(--navy-950); margin:30px 0 12px;}
 .ref-copy p{margin:0 0 16px; font-size:16.5px;}
 .ref-copy p.ref-lead{font-family:var(--font-body); font-weight:700; font-size:18px; color:var(--navy-900); margin:-8px 0 18px;}
+.ref-more{display:inline-flex; align-items:center; gap:8px; margin-top:6px; font-weight:700; color:var(--navy-900); text-decoration:none; border-bottom:2px solid var(--gold-500); padding-bottom:2px; transition:color .2s ease;}
+.ref-more:hover{color:var(--gold-600);}
 .ref-gallery .g-extra{display:none;}
 .ref-gallery .g-more{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(8,31,56,0.55); color:var(--white); font-family:var(--font-mono); font-weight:700; font-size:20px; letter-spacing:.04em; pointer-events:none;}
 .ref-copy .ref-sub + .ref-sub{margin-top:44px; padding-top:40px; border-top:1px solid var(--mist-100);}
@@ -347,7 +349,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="refs">
 <!-- BORUSSIA-PARK -->
-<section class="ref" data-type="lighting" id="borussia-park">
+<section class="ref" data-type="lighting screens" id="borussia-park">
   <div class="container">
     <div class="ref-grid">
       <div class="ref-copy reveal">
@@ -365,11 +367,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li data-i18n="bmg_s5">Programming of lighting scenes and light shows</li>
           <li data-i18n="bmg_s6">Installation of LED floodlighting for 10 training pitches</li>
         </ul>
+        <!-- LED screen on the facade (source: blog/borussia-monchengladbach.html) -->
+        <h3 data-i18n="bmg_led_h">600 m² of LED on the stadium facade</h3>
+        <p data-i18n="bmg_led_p1">The stadium facade now also has a new LED screen: more than 600 m² of display, spread across several surfaces. It is made up of modular LED panels that fit together seamlessly and withstand all weather conditions (IP65, frost, storms and sunshine). With a pixel pitch of P10, tailored to the viewing distance of the supporters, it remains clearly legible even in direct sunlight. The full installation was completed in three weeks.</p>
+        <p data-i18n="bmg_led_p2">The project had to meet Germany’s strict construction standards: the engineering drawings were reviewed and approved by the German authorities before installation, and all welding on the supporting structure was certified to the same standards. All the infrastructure is controlled by a single system that monitors the installation around the clock and automatically shuts the screen down if the temperature exceeds a set threshold.</p>
+        <a class="ref-more" href="blog/borussia-monchengladbach.html"><span data-i18n="bmg_more">Read the full story</span> <span aria-hidden="true">→</span></a>
       </div>
       <div class="ref-gallery reveal">
-        <button class="g-main"><img src="assets/references/bmg-1.webp" alt="Borussia-Park, Mönchengladbach" width="1600" height="1200" loading="lazy"></button>
-        <button class="g-thumb"><img src="assets/references/bmg-2.webp" alt="Borussia-Park, Mönchengladbach" loading="lazy"></button>
-        <button class="g-thumb"><img src="assets/references/bmg-3.webp" alt="Borussia-Park, Mönchengladbach" loading="lazy"></button>
+        <button class="g-main"><img src="assets/references/bmg-facade.webp" alt="Borussia-Park, Mönchengladbach: LED screen on the stadium facade" width="1206" height="908" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/bmg-1.webp" alt="Borussia-Park, Mönchengladbach" loading="lazy"></button>
+        <button class="g-thumb"><img src="assets/references/bmg-2.webp" alt="Borussia-Park, Mönchengladbach" loading="lazy"><span class="g-more">+1</span></button>
+        <button class="g-thumb g-extra"><img src="assets/references/bmg-3.webp" alt="Borussia-Park, Mönchengladbach" loading="lazy"></button>
       </div>
     </div>
     <div class="ref-video reveal">

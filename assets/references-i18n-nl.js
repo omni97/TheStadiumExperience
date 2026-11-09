@@ -158,5 +158,11 @@ window.TSE_REF_I18N.nl = {
   genk_s2: "Locatie: Cegeka Arena, tweede ring",
   genk_s3: "Tribunes: Noord, Oost en Zuid",
   genk_s4: "Lengte LED-luifel: 320 meter",
-  genk_video: "KRC Genk: dronebeelden"
+  genk_video: "KRC Genk: dronebeelden",
+
+  /* Borussia-Park LED facade (source: blog/borussia-monchengladbach.html) */
+  bmg_led_h: "600 m² LED op de stadiongevel",
+  bmg_led_p1: "De stadiongevel heeft nu ook een nieuw LED-scherm: meer dan 600 m² aan beeldschermen, verspreid over verschillende oppervlakken. Het scherm bestaat uit modulaire LED-panelen die naadloos op elkaar aansluiten en tegen alle weersomstandigheden bestand zijn (IP65, vorst, storm en felle zon). Met een pixel pitch van P10, afgestemd op de kijkafstand van de supporters, blijft het ook in fel zonlicht duidelijk afleesbaar. De volledige installatie werd in drie weken afgewerkt.",
+  bmg_led_p2: "Het project moest voldoen aan de strenge Duitse bouwnormen: de technische tekeningen werden vóór de installatie nagekeken en goedgekeurd door de Duitse overheid, en alle laswerken aan de draagconstructie werden volgens diezelfde normen gecertificeerd. Alle infrastructuur wordt aangestuurd door één systeem, dat de installatie 24/7 monitort en het scherm automatisch uitschakelt zodra een ingestelde temperatuurdrempel wordt overschreden.",
+  bmg_more: "Lees het volledige verhaal"
 };

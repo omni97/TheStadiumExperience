@@ -158,5 +158,11 @@ window.TSE_REF_I18N.de = {
   genk_s2: "Standort: Cegeka Arena, zweiter Ring",
   genk_s3: "Tribünen: Nord, Ost und Süd",
   genk_s4: "Länge des LED-Bands: 320 Meter",
-  genk_video: "KRC Genk: Drohnenaufnahmen"
+  genk_video: "KRC Genk: Drohnenaufnahmen",
+
+  /* Borussia-Park LED facade (source: blog/borussia-monchengladbach.html) */
+  bmg_led_h: "600 m² LED an der Stadionfassade",
+  bmg_led_p1: "Die Stadionfassade hat nun auch einen neuen LED-Bildschirm: über 600 m² Anzeigefläche, verteilt auf mehrere Flächen. Er besteht aus modularen LED-Panels, die nahtlos ineinandergreifen und allen Witterungsbedingungen standhalten (IP65, Frost, Stürme und pralle Sonne). Mit einem Pixelabstand von P10, abgestimmt auf den Betrachtungsabstand der Fans, bleibt er auch bei direkter Sonneneinstrahlung gut ablesbar. Die komplette Installation wurde in drei Wochen fertiggestellt.",
+  bmg_led_p2: "Das Projekt musste die strengen deutschen Baunormen erfüllen: Die technischen Zeichnungen wurden vor der Installation von den deutschen Behörden geprüft und genehmigt, und sämtliche Schweißarbeiten an der Tragkonstruktion wurden nach denselben Normen zertifiziert. Die gesamte Infrastruktur wird von einem einzigen System gesteuert, das die Anlage rund um die Uhr überwacht und den Bildschirm automatisch abschaltet, sobald ein festgelegter Temperaturschwellenwert überschritten wird.",
+  bmg_more: "Die ganze Geschichte lesen"
 };

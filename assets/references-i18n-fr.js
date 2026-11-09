@@ -158,5 +158,11 @@ window.TSE_REF_I18N.fr = {
   genk_s2: "Emplacement : Cegeka Arena, deuxième anneau",
   genk_s3: "Tribunes : nord, est et sud",
   genk_s4: "Longueur du bandeau LED : 320 mètres",
-  genk_video: "KRC Genk : images de drone"
+  genk_video: "KRC Genk : images de drone",
+
+  /* Borussia-Park LED facade (source: blog/borussia-monchengladbach.html) */
+  bmg_led_h: "600 m² de LED sur la façade du stade",
+  bmg_led_p1: "La façade du stade dispose désormais aussi d’un nouvel écran LED : plus de 600 m² d’affichage, répartis sur plusieurs surfaces. Il se compose de panneaux LED modulaires qui s’assemblent parfaitement et résistent à toutes les conditions (IP65, gel, tempêtes et plein soleil). Avec un pas de pixel P10, adapté à la distance de vision des supporters, il reste parfaitement lisible même en plein soleil. L’installation complète a été réalisée en trois semaines.",
+  bmg_led_p2: "Le projet devait répondre aux normes de construction allemandes, particulièrement strictes : les plans d’ingénierie ont été vérifiés et approuvés par les autorités allemandes avant l’installation, et toutes les soudures de la structure porteuse ont été certifiées selon ces mêmes normes. L’ensemble de l’infrastructure est piloté par un seul système, qui surveille l’installation 24h/24 et arrête automatiquement l’écran en cas de dépassement d’un seuil de température défini.",
+  bmg_more: "Lire l’histoire complète"
 };
