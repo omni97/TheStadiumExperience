@@ -39,8 +39,8 @@ window.TSE_REF_I18N.fr = {
   bmg_s6: "Installation de l’éclairage LED de 10 terrains d’entraînement",
   bmg_video: "De l’installation au spectacle de lumière : découvrez ce que nous avons réalisé au Borussia-Park",
 
-  cta_title: "Passer à l’éclairage LED pour votre stade",
-  cta_text: "Convaincu des avantages de l’éclairage LED pour les stades et vous souhaitez en discuter ? Contactez-nous sans engagement pour plus d’informations ou pour planifier directement un état des lieux.",
+  cta_title: "Éclairage, LED et audio avec un seul partenaire",
+  cta_text: "Éclairage sportif, LED boarding et écrans, régie et audio, livrés clé en main par une seule équipe : nous réunissons tout dans une seule expérience de stade. Vous souhaitez discuter des possibilités pour votre stade ? Contactez-nous sans engagement pour plus d’informations ou pour planifier directement un état des lieux.",
   cta_btn: "Nous contacter",
 
   ado_p1: "L’ADO Den Haag a franchi une étape importante vers un avenir plus durable en équipant son stade d’un éclairage LED économe en énergie. La nouvelle installation compte 72 luminaires LED haute performance et offre une excellente qualité de lumière tout en réduisant fortement la consommation d’énergie.",

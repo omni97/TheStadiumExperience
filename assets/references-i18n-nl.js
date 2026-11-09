@@ -39,8 +39,8 @@ window.TSE_REF_I18N.nl = {
   bmg_s6: "Installatie van LED-veldverlichting op 10 trainingsvelden",
   bmg_video: "Van installatie tot lichtshow: bekijk wat we hebben gerealiseerd in Borussia-Park",
 
-  cta_title: "Overstappen naar LED-verlichting voor stadions",
-  cta_text: "Overtuigd van de voordelen van LED-verlichting voor stadions en wilt u de mogelijkheden bespreken? Neem vrijblijvend contact met ons op voor meer informatie of om direct een inventarisatie in te plannen.",
+  cta_title: "Verlichting, LED en audio van één partner",
+  cta_text: "Stadionverlichting, LED-boarding en -schermen, show control en audio, turnkey geleverd door één team: wij brengen alles samen in één stadionbeleving. Wilt u de mogelijkheden voor uw stadion bespreken? Neem vrijblijvend contact met ons op voor meer informatie of om direct een inventarisatie in te plannen.",
   cta_btn: "Neem contact op",
 
   ado_p1: "ADO Den Haag heeft een belangrijke stap gezet richting een duurzamere toekomst door het stadion te voorzien van energiezuinige LED-stadionverlichting. De nieuwe installatie bestaat uit 72 hoogwaardige LED-armaturen en levert uitstekende lichtkwaliteit, terwijl het energieverbruik aanzienlijk wordt verminderd.",

@@ -39,8 +39,8 @@ window.TSE_REF_I18N.de = {
   bmg_s6: "Installation von LED-Flutlicht für 10 Trainingsplätze",
   bmg_video: "Von der Installation bis zur Lichtshow: Sehen Sie, was wir im Borussia-Park realisiert haben",
 
-  cta_title: "Umstieg auf LED-Beleuchtung für Stadien",
-  cta_text: "Sind Sie von den Vorteilen der LED-Beleuchtung für Stadien überzeugt und möchten Sie die Möglichkeiten besprechen? Kontaktieren Sie uns unverbindlich für weitere Informationen oder um direkt einen Termin für eine Bestandsaufnahme zu vereinbaren.",
+  cta_title: "Beleuchtung, LED und Audio aus einer Hand",
+  cta_text: "Sportbeleuchtung, LED-Banden und Screens, Show Control und Audio, schlüsselfertig von einem Team geliefert: Wir vereinen alles zu einem Stadionerlebnis. Möchten Sie die Möglichkeiten für Ihr Stadion besprechen? Kontaktieren Sie uns unverbindlich für weitere Informationen oder um direkt einen Termin für eine Bestandsaufnahme zu vereinbaren.",
   cta_btn: "Kontakt aufnehmen",
 
   ado_p1: "ADO Den Haag hat einen wichtigen Schritt in eine nachhaltigere Zukunft gemacht und sein Stadion mit energieeffizienter LED-Flutlichtbeleuchtung modernisiert. Die neue Anlage mit 72 leistungsstarken LED-Leuchten sorgt für hervorragende Lichtqualität bei deutlich geringerem Energieverbrauch.",
